@@ -352,6 +352,8 @@ public:
 ///Structure of the ion chamber data, including the scintillator.
 struct IonData
 {
+	///Energy deposited in the anodes.
+    std::vector<float> anodeE;
     ///The energy deposited in the dE anodes.
     float dE;
     ///The residaul energy in resE anodes.
@@ -359,11 +361,27 @@ struct IonData
     ///The energy deposited in the E1 anodes.
     float E;
     ///Energy deposited in the siPMTs.
-    float scintE[4];
+    std::vector<float> scintE;
     ///Timing of the siPMTs.
-    float scintT[4];
+    std::vector<float> scintT;
+    //Energy deposited in the position sensitive wires
+    std::vector<float> posE;
+    //x position
+    int posx;
+    //y position
+    int posy;
+    //position grid multiplicity;
+    int posxMult;
+    int posyMult;
     ///The time of the ion relative to the beginning of the event.
     unsigned int time;
+};
+
+///Structure of the tdc data
+struct TDCData
+{
+	//Energy from each TDC channel
+	std::vector<float> tdc;
 };
 
 ///Structure of the GammaSphere data for the raw tree

@@ -15,8 +15,8 @@ public:
     typedef std::map<short, float> ValueMap;
     ///A short hand for a map of timestamps per channel.
     typedef std::map<short, unsigned long long> TimeMap;
-    static const bool nType = true;
-    static const bool pType = false;
+    static const int nType = true;
+    static const int pType = false;
 
 private:
     unsigned short numPtype;
@@ -57,16 +57,16 @@ public:
     void SetNumContacts ( int pType, int nType = 0 );
 
     ///Check if specified contact has been declared.
-    bool ValidContact ( unsigned int contact, bool nType );
+    bool ValidContact ( unsigned int contact, int nType );
 
     ///Set the raw energy of the channel.
     virtual void SetRawValue ( unsigned int channel, unsigned int rawValue, int ignThr );
     ///Set the raw energy of the contact and compute the calibrated value.
-    virtual void SetRawValue ( unsigned int contact, bool nType, unsigned int rawValue, int ignThr );
+    virtual void SetRawValue ( unsigned int contact, int nType, unsigned int rawValue, int ignThr );
     ///Set the timestamp for the channel.
-    virtual void SetTimeStamp ( unsigned int contact, bool contactType, unsigned long long timestamp );
+    virtual void SetTimeStamp ( unsigned int contact, int contactType, unsigned long long timestamp );
 
-    virtual float GetEnSum ( bool nType = false, bool calibrated = true ) = 0;
+    virtual float GetEnSum ( int nType = false, bool calibrated = true ) = 0;
     virtual void GetMaxHitInfo ( int* stripMaxP, long long unsigned int* timeSampMaxP, int* stripMaxN, long long unsigned int* timeSampMaxN, bool calibrated = true ) = 0;
 
     virtual void SortAndCalibrate ( bool doCalibrate = true ) = 0;
@@ -74,41 +74,41 @@ public:
     virtual std::vector<float> GetHitsInfo ( std::string info, std::vector<float>* dest = nullptr ) = 0;
     virtual std::vector<int> GetHitsInfo ( std::string info, std::vector<int>* dest = nullptr ) = 0;
     virtual std::vector<long long unsigned int> GetHitsInfo ( std::string info, std::vector<long long unsigned int>* dest = nullptr ) = 0;
-    virtual int GetMultiplicity ( bool nType = false, bool calibrated = true ) = 0;
+    virtual int GetMultiplicity ( int nType = false, bool calibrated = true ) = 0;
 
     ///Get the calibrated energy of the contact specified.
-    float GetCalEnergy ( int contact, bool nType = false );
+    float GetCalEnergy ( int contact, int nType = false );
     ///Return the total number of fired contacts above theshold.
     virtual int GetContactMult ( bool calibrated = true ) = 0;
     ///Return the number of fired contacts above threhsold for the specified type.
-    virtual int GetContactMult ( bool contactType, bool calibrated ) = 0;
+    virtual int GetContactMult ( int contactType, bool calibrated ) = 0;
 
     ///Return the smallest timestamp.
     unsigned long long GetTimeStamp();
 
     ///Return true if the contact energy was set.
-    bool ContactHit ( int contact, bool nType );
+    bool ContactHit ( int contact, int nType );
 
     ///Return the number of channels of the type specified.
-    int GetNumChannels ( bool nType );
+    int GetNumChannels ( int nType );
 
     ///Specify the polynomial calibration parameters of the specified contact.
-    bool SetEnergyCalib ( std::vector<float> par, int contact, bool contactType = siDet::pType );
+    bool SetEnergyCalib ( std::vector<float> par, int contact, int contactType = siDet::pType );
 
     ///Specify the thresholds for each channel.
-    bool SetThresholds ( std::vector<int> thresholds, bool contactType = siDet::pType, int thrSize = 0 );
+    bool SetThresholds ( std::vector<int> thresholds, int contactType = siDet::pType, int thrSize = 0 );
 
     ///Get a map of the raw energies.
-    ValueMap GetRawEn ( bool nType );
+    ValueMap GetRawEn ( int nType );
     ///Get a map of the calibrated energies.
-    ValueMap GetCalEn ( bool nType );
+    ValueMap GetCalEn ( int nType );
 
-    TimeMap GetTsMap ( bool nType );
+    TimeMap GetTsMap ( int nType );
 
-    std::vector<std::vector<float>> GetEnParCal ( bool nType = false );
+    std::vector<std::vector<float>> GetEnParCal ( int nType = false );
 
     ///Get a map of the thresholds.
-    std::vector<int> GetThresholds ( bool nType );
+    std::vector<int> GetThresholds ( int nType );
 
     ClassDef ( siDet, 1 )
 

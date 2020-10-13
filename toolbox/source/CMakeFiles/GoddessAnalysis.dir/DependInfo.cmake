@@ -1,0 +1,14 @@
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+# The set of files for implicit dependencies of each language:
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/chad/goddess_daq/goddess/source/CMakeFiles/ORRUBA.dir/DependInfo.cmake"
+  "/home/chad/goddess_daq/goddess/source/CMakeFiles/GoddessStruct.dir/DependInfo.cmake"
+  "/home/chad/goddess_daq/toolbox/source/CMakeFiles/GoddessToolboxLib.dir/DependInfo.cmake"
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

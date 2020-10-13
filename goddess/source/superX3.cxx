@@ -229,7 +229,7 @@ void superX3::SetGeomParams(map<string, double> geomInfos_)
  *  \param[in] rawValue The raw contact value in channels.
  * \param[in] nType Whether the contact was n Type.
  */
-void superX3::SetRawValue(unsigned int contact, bool nType, int rawValue, int ignThr)
+void superX3::SetRawValue(unsigned int contact, int nType, int rawValue, int ignThr)
 {
 	if (!ValidContact(contact, nType))
 	{
@@ -416,7 +416,7 @@ std::vector<float> superX3::GetResEn(bool calibrated)
 	return resEn;
 }
 
-float superX3::GetEnSum(bool nType, bool calibrated)
+float superX3::GetEnSum(int nType, bool calibrated)
 {
 	float enSum = 0;
 
@@ -540,7 +540,7 @@ int superX3::GetContactMult(bool calibrated)
 	else return enNearRaw.size() + enRawN.size();
 }
 
-int superX3::GetContactMult(bool contactType, bool calibrated)
+int superX3::GetContactMult(int contactType, bool calibrated)
 {
 	if (contactType == siDet::nType)
 	{
@@ -642,7 +642,7 @@ void superX3::GetMaxHitInfo(int* stripMaxP, long long unsigned int* timeSampMaxP
 	}
 }
 
-int superX3::GetMultiplicity(bool nType, bool calibrated)
+int superX3::GetMultiplicity(int nType, bool calibrated)
 {
 	if (nType && calibrated) return enCalN.size();
 	else if (nType && !calibrated) return enRawN.size();

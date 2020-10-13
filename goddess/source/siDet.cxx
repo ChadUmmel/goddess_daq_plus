@@ -39,7 +39,7 @@ void siDet::SetNumContacts ( int pType, int nType/*=0*/ )
  * \param[in] nType Whether the contact is nType.
  *  \return True is contact has been declared.
  */
-bool siDet::ValidContact ( unsigned int contact, bool nType/*=false*/ )
+bool siDet::ValidContact ( unsigned int contact, int nType/*=false*/ )
 {
     size_t size = numPtype;
     if ( nType )
@@ -84,7 +84,7 @@ void siDet::SetRawValue ( unsigned int channel, unsigned int rawValue, int ignTh
  *  \param[in] rawValue The raw contact value in channels.
  *  \param[in] nType Whether the contact selected is n type.
  */
-void siDet::SetRawValue ( unsigned int contact, bool nType, unsigned int rawValue, int ignThr )
+void siDet::SetRawValue ( unsigned int contact, int nType, unsigned int rawValue, int ignThr )
 {
     if ( !ValidContact ( contact, nType ) )
     {
@@ -121,7 +121,7 @@ void siDet::SetRawValue ( unsigned int contact, bool nType, unsigned int rawValu
     }
 }
 
-void siDet::SetTimeStamp ( unsigned int contact, bool contactType, unsigned long long timestamp /*=0*/ )
+void siDet::SetTimeStamp ( unsigned int contact, int contactType, unsigned long long timestamp /*=0*/ )
 {
     if ( !ValidContact ( contact, contactType ) )
     {
@@ -137,13 +137,13 @@ void siDet::SetTimeStamp ( unsigned int contact, bool contactType, unsigned long
     }
 }
 
-std::vector< std::vector< float > > siDet::GetEnParCal ( bool nType )
+std::vector< std::vector< float > > siDet::GetEnParCal ( int nType )
 {
     if ( nType ) return parEnCalN;
     else return parEnCalP;
 }
 
-float siDet::GetCalEnergy ( int contact, bool nType/*=false*/ )
+float siDet::GetCalEnergy ( int contact, int nType/*=false*/ )
 {
     if ( !ValidContact ( contact, nType ) )
     {
@@ -170,7 +170,7 @@ float siDet::GetCalEnergy ( int contact, bool nType/*=false*/ )
 /*
  * \return True if successful.
  */
-bool siDet::SetEnergyCalib ( std::vector<float> par, int contact, bool nType/*=false*/ )
+bool siDet::SetEnergyCalib ( std::vector<float> par, int contact, int nType/*=false*/ )
 {
     if ( !ValidContact ( contact, nType ) )
     {
@@ -187,7 +187,7 @@ bool siDet::SetEnergyCalib ( std::vector<float> par, int contact, bool nType/*=f
     return true;
 }
 
-bool siDet::SetThresholds ( std::vector<int> thresholds, bool contactType, int thrSize )
+bool siDet::SetThresholds ( std::vector<int> thresholds, int contactType, int thrSize )
 {
     if ( thrSize == 0 ) thrSize = ( unsigned int ) GetNumChannels ( contactType );
 
@@ -209,7 +209,7 @@ bool siDet::SetThresholds ( std::vector<int> thresholds, bool contactType, int t
     return true;
 }
 
-int siDet::GetNumChannels ( bool nType )
+int siDet::GetNumChannels ( int nType )
 {
     if ( nType )
     {
@@ -218,7 +218,7 @@ int siDet::GetNumChannels ( bool nType )
     return numPtype;
 }
 
-std::vector<int> siDet::GetThresholds ( bool nType )
+std::vector<int> siDet::GetThresholds ( int nType )
 {
     if ( nType )
     {
@@ -227,7 +227,7 @@ std::vector<int> siDet::GetThresholds ( bool nType )
     return threshP;
 }
 
-siDet::ValueMap siDet::GetRawEn ( bool nType )
+siDet::ValueMap siDet::GetRawEn ( int nType )
 {
     if ( nType )
     {
@@ -236,7 +236,7 @@ siDet::ValueMap siDet::GetRawEn ( bool nType )
     return enRawPMap;
 }
 
-siDet::ValueMap siDet::GetCalEn ( bool nType )
+siDet::ValueMap siDet::GetCalEn ( int nType )
 {
     if ( nType )
     {
@@ -245,13 +245,13 @@ siDet::ValueMap siDet::GetCalEn ( bool nType )
     return enCalPMap;
 }
 
-siDet::TimeMap siDet::GetTsMap ( bool nType )
+siDet::TimeMap siDet::GetTsMap ( int nType )
 {
     if ( nType ) return timeNMap;
     else return timePMap;
 }
 
-bool siDet::ContactHit ( int contact, bool nType )
+bool siDet::ContactHit ( int contact, int nType )
 {
     ValueMap *map = &enRawPMap;
     if ( nType )

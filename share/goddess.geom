@@ -7,7 +7,7 @@ Barrel Radius = 98.43
 Barrel Length = 228.6
 
 # Angle of the target ladder with the beam line in degrees
-Target Ladder Angle = 60
+Target Ladder Angle = 63
 
 --------------------------------------------------------------------------------------------------
 

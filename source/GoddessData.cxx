@@ -11,6 +11,7 @@
 #include "superX3.h"
 #include "BB10.h"
 #include "LiquidScint.h"
+#include "TDC.h"
 
 
 #include <iostream>
@@ -102,6 +103,7 @@ GoddessData::GoddessData ( PARS* pars_, GoddessConfig* gconf_ )
     siDataD = new std::vector<SiDataDetailed>;
     ionData = new std::vector<IonData>;
     gretdata = new std::vector<GretData>;
+    tdcData = new std::vector<TDCData>;
 
     if ( pars->noMapping )
     {
@@ -168,6 +170,7 @@ GoddessData::GoddessData ( PARS* pars_, GoddessConfig* gconf_ )
         else if ( pars->siDetailLvl == 1 ) tree->Branch ( "si", &siData, 32000, 0 );
 
         tree->Branch ( "ic", &ionData );
+        tree->Branch ("tdc", &tdcData);
     }
 
     pars->mainTree = tree;
@@ -189,6 +192,7 @@ GoddessData::GoddessData ( PARS* pars_, GoddessConfig* gconf_ )
         }
         siData_snc = new std::vector<SiDataDetailed>;
         ionData_snc = new std::vector<IonData>;
+        tdcData_snc = new std::vector<TDCData>;
 
         sortedTree = new TTree ( "sorted", "GODDESS Sorted not Calibrated Tree" );
         sortedTree->Branch ( "timestamp", &firstTimestamp );
@@ -207,6 +211,7 @@ GoddessData::GoddessData ( PARS* pars_, GoddessConfig* gconf_ )
         }
         if ( pars->siDetailLvl > 0 ) sortedTree->Branch ( "si", &siData_snc, 32000, 0 );
         sortedTree->Branch ( "ic", &ionData_snc );
+        sortedTree->Branch ("tdc", &tdcData_snc );
     }
 
     if ( pars->noMapping )
@@ -539,6 +544,7 @@ int GoddessData::Fill ( GEB_EVENT* gebEvt, std::vector<DGSEVENT>* dgsEvts, std::
             orrubaDet* siDet = dynamic_cast<orrubaDet*> ( det );
             IonChamber* ionChamber_ = dynamic_cast<IonChamber*> ( det );
             LiquidScint* liquidScint_ = dynamic_cast<LiquidScint*> ( det );
+            TDC* tdc_ = dynamic_cast<TDC*> (det);
 
             if ( siDet )
             {
@@ -559,12 +565,17 @@ int GoddessData::Fill ( GEB_EVENT* gebEvt, std::vector<DGSEVENT>* dgsEvts, std::
             }
             else if ( ionChamber_ )
             {
-                if ( pars->GammaProcessor == 0 )
-                {
+                //if ( pars->GammaProcessor == 0 )
+                //{
                     posID = "ion";
                     ionChamber = ionChamber_;
-                }
+                //}
             }
+            else if ( tdc_ )
+            {
+            	posID = "tdc";
+            	tdc = tdc_;
+			}
 
              firedDets[posID] = det;
         }
@@ -621,6 +632,7 @@ int GoddessData::Fill ( GEB_EVENT* gebEvt, std::vector<DGSEVENT>* dgsEvts, std::
         orrubaDet* siDet = dynamic_cast<orrubaDet*> ( det );
         IonChamber* ionChamber_ = dynamic_cast<IonChamber*> ( det );
         LiquidScint* liquidScint_ = dynamic_cast<LiquidScint*> ( det );
+        TDC* tdc_ = dynamic_cast<TDC*> (det);
 
         if ( siDet )
         {
@@ -642,17 +654,18 @@ int GoddessData::Fill ( GEB_EVENT* gebEvt, std::vector<DGSEVENT>* dgsEvts, std::
             posID = "ion";
             ionChamber = ionChamber_;
         }
+        else if (tdc_)
+        {
+        	tdc = tdc_;
+        }
 
         firedDets[posID] = det;
     }
 
-
     for ( auto detItr = siDets.begin(); detItr != siDets.end(); detItr++ )
     {
         detItr->second->SortAndCalibrate ( doCalibrate );
-
     }
-
 
     int userFilterFlag = 0;
 
@@ -1323,21 +1336,86 @@ int GoddessData::FillTrees ( GEB_EVENT* gebEvt, std::vector<DGSEVENT>* dgsEvts, 
 
 //Deal with the ion chamber
     if ( firedDets.find ( "ion" ) != firedDets.end() )
-    {
-        IonData datum;
-        datum.dE = ionChamber->GetAnodeDE();
-        datum.resE = ionChamber->GetAnodeResE();
-        datum.E = ionChamber->GetAnodeE();
-
-        ionData->push_back ( datum );
-
-        if ( pars->noCalib == 2 )
-        {
-            ionData_snc->push_back ( datum );
-        }
+    {   
+        
+        int mult = ionChamber->GetMultiplicity();
+     	
+        if (pars->noCalib==0 || pars->noCalib==2) { //grab the calibrated tree leaves, if specified
+		    for (int i=0; i<mult; i++) {
+		    	IonData datum;
+		    	datum.dE = NAN;
+		    	datum.resE = NAN;
+		    	datum.E = NAN;
+		    	datum.anodeE.clear();
+		    	datum.scintE.clear();
+		    	datum.scintT.clear();
+		    	datum.posE.clear();
+		    	datum.posx=0;
+		    	datum.posy=0;
+		    	datum.posxMult = 0;
+		    	datum.posyMult = 0;
+		    	
+		    	if (i==0) {
+		    		datum.dE = ionChamber->GetAnodeDE(true);
+		    		datum.resE = ionChamber->GetAnodeResE(true);
+		    		datum.E = ionChamber->GetAnodeE(true);
+		    		datum.posx = ionChamber->GetPosx();
+		    		datum.posy = ionChamber->GetPosy();
+		    		datum.posxMult = ionChamber->GetPosxMultiplicity();
+		    		datum.posyMult = ionChamber->GetPosyMultiplicity();
+		    	}
+				datum.anodeE = ionChamber->GetAnodesE(i, true);
+				datum.scintE = ionChamber->GetScintE(i, true);
+				datum.scintT = ionChamber->GetScintT(i);
+				datum.posE = ionChamber->GetPosE(i, true);
+		    	
+		    	ionData->push_back(datum);
+		    }
+		}
+		if (pars->noCalib==1 || pars->noCalib==2) { //grab the sorted, uncalibrated tree leaves, if specified
+		    for (int i=0; i<mult; i++) {
+		    	IonData datum;
+		    	datum.dE = NAN;
+		    	datum.resE = NAN;
+		    	datum.E = NAN;
+		    	datum.anodeE.clear();
+		    	datum.scintE.clear();
+		    	datum.scintT.clear();
+		    	datum.posE.clear();
+		    	datum.posx=0;
+		    	datum.posy=0;
+		    	datum.posxMult = 0;
+		    	datum.posyMult = 0;
+		    	
+		    	if (i==0) {
+		    		datum.dE = ionChamber->GetAnodeDE(false);
+		    		datum.resE = ionChamber->GetAnodeResE(false);
+		    		datum.E = ionChamber->GetAnodeE(false);
+		    		datum.posx = ionChamber->GetPosx();
+		    		datum.posy = ionChamber->GetPosy();
+		    		datum.posxMult = ionChamber->GetPosxMultiplicity();
+		    		datum.posyMult = ionChamber->GetPosyMultiplicity();
+		    	}
+				datum.anodeE = ionChamber->GetAnodesE(i, false);
+				datum.scintE = ionChamber->GetScintE(i, false);
+				datum.scintT = ionChamber->GetScintT(i);
+				datum.posE = ionChamber->GetPosE(i, false);
+				
+		    	if (pars->noCalib==1) ionData->push_back(datum);
+		    	else ionData_snc->push_back(datum);
+		    }
+		}
     }
 
 //     cerr<<"After fired dets."<<endl;
+
+//Deal with the TDC
+    if ( firedDets.find ( "tdc" ) != firedDets.end() ) {
+    	TDCData datum;
+    	datum.tdc = tdc->GetTDC();
+    	tdcData->push_back(datum);
+    	if (pars->noCalib==2) tdcData_snc->push_back(datum);
+    }
 
 //Deal with the neutron detectors
     for ( auto lsItr = liquidScints.begin(); lsItr != liquidScints.end(); ++lsItr )
@@ -1366,6 +1444,7 @@ int GoddessData::FillTrees ( GEB_EVENT* gebEvt, std::vector<DGSEVENT>* dgsEvts, 
     siData->clear();
     siDataD->clear();
     ionData->clear();
+    tdcData->clear();
     if ( pars->GammaProcessor == 1 )
     {
         gretdata->clear();
@@ -1380,6 +1459,7 @@ int GoddessData::FillTrees ( GEB_EVENT* gebEvt, std::vector<DGSEVENT>* dgsEvts, 
         }
         siData_snc->clear();
         ionData_snc->clear();
+        tdcData_snc->clear();
         if ( pars->GammaProcessor == 1 )
         {
             gretdata_snc->clear();

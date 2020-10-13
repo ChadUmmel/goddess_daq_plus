@@ -317,7 +317,7 @@ int GODProcessor::DGODEvDecompose ( unsigned int* ev, int len, DFMAEVENT* thedfm
 /* ----------------------------------------------------------------- */
 
 int GODProcessor::BinDGOD ( GEB_EVENT* gebEvt, DFMAEVENT* dfmaEvt, DGSEVENT* dgsEvt, GRETEVENT* gretEvt )
-{
+{	
     char str[128];
     int j;
     int ndssd;
@@ -817,7 +817,6 @@ int GODProcessor::BinGOD ( GEB_EVENT* gebEvt, AGODEVENT* agodEvt, DFMAEVENT* dfm
     }
     
 //     cerr<<"After gret event."<<endl;
-
 
     return godData->Fill ( gebEvt, &dgsEvts, &dfmaEvts, &agodEvts, &gretEvts );
 }

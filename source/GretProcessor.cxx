@@ -238,10 +238,11 @@ float GretProcessor::DopplerCorrection ( float in_energy, float phi)
 {
     float cor_energy = 0;
 
-    if ( pars->beta != 0 && in_energy< 513 && in_energy>508 )
+    if ( pars->beta != 0 )//&& in_energy< 513 && in_energy>508 )
     {
-
+        //in_energy = 511;
         cor_energy = in_energy * ( 1 - pars->beta * cos ( phi ) ) / sqrt ( 1 - pars->beta * pars->beta );
+        //std::cerr<<"beta = "<<pars->beta<<",	phi = "<<phi<<",	in_energy = "<<in_energy<<";	cor_energy = "<<cor_energy<<std::endl;
     }
 
     return cor_energy;
@@ -489,7 +490,11 @@ int GretProcessor::Gret_Tracking ( GEB_EVENT* theGEBEvent, GRETEVENT* thegretEvt
 
                 }
 
-                thegretEvt->e = DopplerCorrection ( tot_energy, event->at ( hit ).phi);
+
+				//std::cerr<<"tot_energy = "<<tot_energy<<",	phi = "<<event->at(hit).phi<<",	raw_e = "<<event->at(hit).raw_e<<std::endl;
+				//std::cerr<<"FIRST beta = "<<pars->beta<<",	phi = "<<event->at(hit).phi<<std::endl;
+				
+                thegretEvt->e = DopplerCorrection ( tot_energy, event->at ( hit ).theta);
 
                 thegretEvt->x = event->at ( hit ).x;
                 thegretEvt->y = event->at ( hit ).y;
@@ -561,7 +566,9 @@ int GretProcessor::Gret_Tracking ( GEB_EVENT* theGEBEvent, GRETEVENT* thegretEvt
                         tot_energy += second_event->at ( ff ).raw_e;
                     }
 
-                    thegretEvt->e  = DopplerCorrection ( tot_energy, second_event->at ( hit ).phi );
+					//std::cerr<<"SECOND beta = "<<pars->beta<<",	phi = "<<event->at(hit).phi<<std::endl;
+
+                    thegretEvt->e  = DopplerCorrection ( tot_energy, second_event->at ( hit ).theta );
 
                     thegretEvt->x = second_event->at ( hit ).x;
                     thegretEvt->y = second_event->at ( hit ).y;
@@ -617,8 +624,9 @@ int GretProcessor::Gret_Tracking ( GEB_EVENT* theGEBEvent, GRETEVENT* thegretEvt
 
                     }
 
+					//std::cerr<<"THIRD beta = "<<pars->beta<<",	phi = "<<event->at(hit).phi<<std::endl;
 
-                    thegretEvt->e = DopplerCorrection ( tot_energy, third_event->at ( hit ).phi );
+                    thegretEvt->e = DopplerCorrection ( tot_energy, third_event->at ( hit ).theta );
 
                     thegretEvt->x = third_event->at ( hit ).x;
                     thegretEvt->y = third_event->at ( hit ).y;

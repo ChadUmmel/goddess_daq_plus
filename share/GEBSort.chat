@@ -11,7 +11,7 @@ DumpEvery 600
 
 nevents           100000000000000000
 printevents       10
-beta              0.0
+beta              0.1343756	
 modwrite          50000
 tsnumwrites       50
 gglen             2600

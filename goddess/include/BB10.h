@@ -84,10 +84,10 @@ public:
     ///Return the total number of fired contacts above theshold.
     virtual int GetContactMult ( bool calibrated = true );
     ///Return the number of fired contacts above threhsold for the specified type.
-    virtual int GetContactMult ( bool contactType, bool calibrated );
+    virtual int GetContactMult ( int contactType, bool calibrated );
 
     ///Returns the sum of the energies gathered on the front (back if nType is true) side.
-    virtual float GetEnSum ( bool nType = false, bool calibrated = true );
+    virtual float GetEnSum ( int nType = false, bool calibrated = true );
 
     ///Assign the proper strip number (and calibrate in energy)
     virtual void SortAndCalibrate ( bool doCalibrate = true );
@@ -99,7 +99,7 @@ public:
     virtual void SetGeomParams ( map<string, double> geomInfos_ );
 
     ///Set the raw energy of the contact and compute the calibrated value.
-    virtual void SetRawValue ( unsigned int contact, bool nType, int rawValue, int ignThr );
+    virtual void SetRawValue ( unsigned int contact, int nType, int rawValue, int ignThr );
 
     ///If the energy is dependent of the position of interaction in the detector, this function assign an Energy vs. Position correction graph
     /// \note used only for SX3s or other position sensitive detectors
@@ -130,7 +130,7 @@ public:
     virtual void GetMaxHitInfo ( int* stripMaxP, long long unsigned int* timeSampMaxP, int* stripMaxN, long long unsigned int* timeSampMaxN, bool calibrated = true );
 
     ///Returns the multiplicity of the event
-    virtual int GetMultiplicity ( bool nType = false, bool calibrated = true );
+    virtual int GetMultiplicity ( int nType = false, bool calibrated = true );
 
     /// \cond This is just for ROOT and doesn't need to be documented
     ClassDef ( BB10, 1 )

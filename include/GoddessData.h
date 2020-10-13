@@ -6,6 +6,7 @@
 #include "orrubaDet.h"
 #include "IonChamber.h"
 #include "LiquidScint.h"
+#include "TDC.h"
 #include "GoddessStruct.h"
 
 #include "GTMerge.h"
@@ -47,6 +48,8 @@ class GoddessData
 		std::vector<IonData>* ionData;
 		//Pointer to the vector of Gretina information.
 		std::vector<GretData>* gretdata;
+		//Pointer to the vector of TDC information.
+		std::vector<TDCData>* tdcData;
 		
 		
 		//The pointer to the vector of gamma Gret sorted but not calibrated information.
@@ -57,6 +60,8 @@ class GoddessData
 		std::vector<SiDataDetailed>* siData_snc;
 		///Pointer to the vector of ion chamber sorted but not calibrated information.
 		std::vector<IonData>* ionData_snc;
+		///Pointer to the vector or TDC sorted but not calibrated information.
+		std::vector<TDCData>* tdcData_snc;
 
 		///The pointer to the vector containing channel/value pairs to store in the raw tree for the digital part of ORRUBA
 		ORRUBARawData* orrubaRaw;
@@ -78,6 +83,7 @@ class GoddessData
 		std::map<std::string, orrubaDet*> siDets;
 		IonChamber* ionChamber;
 		std::map<std::string, LiquidScint*> liquidScints;
+		TDC* tdc;
 
 		TH2F* enRawA;
 		TH2F* enRawD;

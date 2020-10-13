@@ -28,13 +28,13 @@ public:
     virtual ~Detector();
 
     ///Return the number of channels of the type specified.
-    virtual int GetNumChannels ( bool secondaryType ) = 0;
+    virtual int GetNumChannels ( int secondaryType ) = 0;
 
     ///Set the raw energy of the channel.
-    virtual void SetRawValue ( unsigned int detectorChannel, bool secondaryType, unsigned int rawValue, int ignThr ) = 0;
+    virtual void SetRawValue ( unsigned int detectorChannel, int secondaryType, unsigned int rawValue, int ignThr ) = 0;
 
     ///Set the timestamp for the channel.
-    virtual void SetTimeStamp ( unsigned int detectorChannel, bool secondaryType, unsigned long long timestamp ) = 0;
+    virtual void SetTimeStamp ( unsigned int detectorChannel, int secondaryType, unsigned long long timestamp ) = 0;
 
     virtual void Clear() = 0;
 

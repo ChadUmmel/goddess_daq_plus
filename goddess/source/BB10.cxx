@@ -64,7 +64,7 @@ void BB10::SetGeomParams ( map< string, double > geomInfos_ )
  *  \param rawValue The raw contact value in channels.
  * \param nType Whether the contact was n Type.
  */
-void BB10::SetRawValue ( unsigned int contact, bool nType, int rawValue, int ignThr )
+void BB10::SetRawValue ( unsigned int contact, int nType, int rawValue, int ignThr )
 {
     siDet::SetRawValue ( contact, nType, rawValue, ignThr );
 }
@@ -79,7 +79,7 @@ void BB10::SetEnShiftVsPosGraph ( std::string graphFileName )
     }
 }
 
-float BB10::GetEnSum ( bool nType, bool calibrated )
+float BB10::GetEnSum ( int nType, bool calibrated )
 {
     float enSum = 0.0;
 
@@ -143,7 +143,7 @@ int BB10::GetContactMult ( bool calibrated )
     else return enRawP.size();
 }
 
-int BB10::GetContactMult ( bool /*contactType*/, bool calibrated )
+int BB10::GetContactMult ( int /*contactType*/, bool calibrated )
 {
     if ( calibrated ) return enRawP.size();
     else return enRawP.size();
@@ -210,7 +210,7 @@ void BB10::GetMaxHitInfo ( int* stripMaxP, long long unsigned int* timeSampMaxP,
     }
 }
 
-int BB10::GetMultiplicity ( bool /*nType*/, bool calibrated )
+int BB10::GetMultiplicity ( int /*nType*/, bool calibrated )
 {
     if ( calibrated ) return enCalP.size();
     else if ( !calibrated ) return enRawP.size();

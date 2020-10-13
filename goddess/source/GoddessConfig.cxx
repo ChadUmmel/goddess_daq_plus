@@ -9,6 +9,7 @@
 #include "superX3.h"
 #include "BB10.h"
 #include "QQQ5.h"
+#include "TDC.h"
 #include <GEBSort.h>
 
 /**
@@ -65,21 +66,30 @@ GoddessConfig::~GoddessConfig()
  * \note SuperX3 strip energy calibration parameters (i.e. slope and offset) are entered in after "enCal resStrip"
  * \note SuperX3 strip position calibration parameters are entered in after "posCal resStrip"
  *
- * Also supported, is an ion detector with a built-in scintillator. An example of a
+ * Also supported, is an ion detector with a built-in scintillator and/or position sensitive grids. An example of a
  * typical configuration follows:
- * ion 5 4 2 3 13 0 19 16
- *  enCal anode 0 0 1 2
- *  posCal scint 0 4 5 6
- *  timeCal scint 0 2 3 4
+ * ion 19 2 1 1 0 19 4 2 19 64 6
+ *	thresh pos 600 600 600 ...
+ *	enCal anode 0 0 1
+ *	enCal scint 0 0 1
+ *	enCal pos 0 0 1
  *
- * This configuration defines an ion chamber with 5 anodes and 4 scintillator PMTs.
- * The energy loss signal is composed of the first two anodes and the residual
- * energy is composed of the following 3 channels. There may be more anodes read out
- * then used in computing these two values. We then have the DAQ type 13, channel 0, for the anodes
- * then DAQ type 19, channel 16, for the scintillators. Following this is a list of calibration
- * parameters for energy, position and time. This calibration lines follow the same
- * format as the silicons with subtypes or anode and scint.
- * \note The position and time calibration are only supported for the scint subtype.
+ * This configuration defines an ion chamber with anode DAQ type 19, 2 anodes, with
+ * The energy loss signal is composed of the first 1 anode and the residual energy is
+ * composed of the following 1 anode, starting with dE on channel 0;
+ * scintillator DAQ type 19, 4 scintillator PMs, starting on channel 2; and
+ * position grid DAQ type 19, 64 position sensitive wires (divided evenly into 32 x
+ * wires and 32 y wires) with the first x wire starting on channel 6.
+ * Following this is a list of thresholds and energy calibration parameters.
+ * These threshold and calibration lines follow the same format as the silicons with
+ * subtypes of anode, scint, and pos.
+ * \note No position and time calibration are presently supported for any subtype
+ *
+ *
+ * A basic TDC is also supported
+ *	tdc 19 8 400
+ *
+ * This defines a tdc with DAQ type 19, 8 channels, beginning on channel 400
  *
  *
  * \param[in] filename The configuration file to be read.
@@ -128,7 +138,7 @@ void GoddessConfig::ReadConfig(std::string filename, std::string sx3EnAdjustFNam
 		}
 
 		//Report the one we are registering.
-		std::cout << "Registering " << detType << " detector: \n";
+		//std::cerr << "Registering " << detType << " detector: \n";
 
 		if (detType == "ion")
 		{
@@ -151,6 +161,19 @@ void GoddessConfig::ReadConfig(std::string filename, std::string sx3EnAdjustFNam
 				chMap[std::make_pair(daqType, daqCh)] = std::make_pair(liquidScints.back(), false);
 			}
 		}
+		
+		else if (detType == "tdc") {
+			int daqType, numCh, daqCh;
+			if (lineStream >> daqType >> numCh >> daqCh) {;
+				TDC *tdc_ = new TDC(numCh);
+				if (IsInsertable(daqType, daqCh, tdc_, tdc_->GetNumChannels(Detector::Primary))) {
+					chMap[std::make_pair(daqType, daqCh)] = std::make_pair(tdc_, false);
+				}
+				else std::cerr << "ERROR: TDC channels will not be unpacked!\n";
+			}
+			else std::cerr<<"ERROR: TDC channels will not be unpacked!\n";
+		}
+
 		else if (detType == "QQQ5" || detType == "BB10" || detType == "superX3")
 		{
 			int pTypeDaqType, nTypeDaqType;
@@ -335,16 +358,37 @@ void GoddessConfig::ReadConfig(std::string filename, std::string sx3EnAdjustFNam
 			}
 
 			//Check that the subtype is valid
-			bool secondaryType = false;
+			int secondaryType = 0;
 
 			if (detType == "ion")
 			{
-				if (subType != "scint" && subType != "anode")
+				//std::cerr<<"subType = "<<subType<<std::endl;
+				if (subType != "scint" && subType != "anode" && subType != "pos")
 				{
 					std::cerr << " ERROR: Unknown subtype '" << subType << "'!\n";
 					std::cerr << "  Valid options: anode, strip.\n";
 					continue;
 				}
+				if (subType == "anode")
+				{
+					secondaryType = 0;
+				}
+				else if (subType == "scint")
+				{
+					secondaryType = 1;
+				}
+				else if (subType == "pos")
+				{
+					secondaryType = 2;
+				}
+				else
+				{
+					std::cerr<<"WARNING:  Calibrations/thresholds are not currently implemented for ion chamber subtype "<<subType<<std::endl;
+				}
+			}
+			else if (detType == "tdc")
+			{
+				std::cerr<<"WARNING:  Calibration/thresholds are not currently implemented for the TDC"<<std::endl;
 			}
 			else
 			{
@@ -370,13 +414,16 @@ void GoddessConfig::ReadConfig(std::string filename, std::string sx3EnAdjustFNam
 					thresholds.push_back(threshold);
 				}
 
-				if (secondaryType)
+				if (secondaryType==1)
 				{
 					std::cout << "Setting n-type thresholds to:";
 				}
-				else
+				else if (secondaryType==0)
 				{
 					std::cout << "Setting p-type thresholds to:";
+				}
+				else if (secondaryType==2) {
+					std::cout<< "Setting position sensitive thresholds to:";
 				}
 
 				for (size_t threshNum = 0; threshNum < thresholds.size(); threshNum++)
@@ -395,6 +442,9 @@ void GoddessConfig::ReadConfig(std::string filename, std::string sx3EnAdjustFNam
 				{
 					if (detType == "superX3" && !secondaryType) det->SetThresholds(thresholds, secondaryType);
 					else det->SetThresholds(thresholds, secondaryType);
+				}
+				else if (detType == "ion") {
+					ionChamber->SetThresholds(thresholds, secondaryType);
 				}
 				else
 				{
@@ -468,6 +518,9 @@ void GoddessConfig::ReadConfig(std::string filename, std::string sx3EnAdjustFNam
 					{
 						ionChamber->SetScintEnCalPars(detChannel, calParams);
 					}
+				}
+				else if (subType == "pos") {
+					ionChamber->SetPosEnCalPars(detChannel, calParams);
 				}
 				else
 				{
@@ -672,19 +725,20 @@ void GoddessConfig::ReadReacInfo(unsigned int run)
 
 IonChamber * GoddessConfig::ReadIonChamberConfig(std::istringstream & lineStream)
 {
-	int numAnode, numScint, numDE, numEres;
-	int anodeDaqType, anodeDaqCh;
-	int scintDaqType, scintDaqCh;
-
-	if (!(lineStream >> numAnode >> numScint >> numDE >> numEres >> anodeDaqType >> anodeDaqCh >> scintDaqType >> scintDaqCh))
+	int anodeDaqType, numAnode, numDE, numEres, anodeDaqCh;
+	int scintDaqType, numScint, scintDaqCh;
+	int posDaqType, numPos, posDaqCh;
+	
+	if (!(lineStream >> anodeDaqType >> numAnode >> numDE >> numEres >> anodeDaqCh >> scintDaqType >> numScint >> scintDaqCh >> posDaqType >> numPos >> posDaqCh))
 	{
 		return NULL;
 	}
 
-	std::cout << " Anodes: " << numAnode << ", Scint PMTs: " << numScint;
-	std::cout << " dE: " << numDE << " anodes, Eres " << numEres << "\n";
+	//std::cerr << " Anodes: " << numAnode << ", Scint PMTs: " << numScint << std::endl;
+	//std::cerr << " dE anodes: " << numDE << "  Eres anodes: " << numEres << std::endl;
+	//std::cerr << " Position wires: " << numPos << std::endl;
 
-	IonChamber *ionChamber_ = new IonChamber(numAnode, numScint, numDE, numEres);
+	IonChamber *ionChamber_ = new IonChamber(numAnode, numDE, numEres, numScint, numPos);
 
 	if (IsInsertable(anodeDaqType, anodeDaqCh, ionChamber_, ionChamber_->GetNumChannels(Detector::Primary)))
 	{
@@ -697,11 +751,20 @@ IonChamber * GoddessConfig::ReadIonChamberConfig(std::istringstream & lineStream
 
 	if (IsInsertable(scintDaqType, scintDaqCh, ionChamber_, ionChamber_->GetNumChannels(Detector::Secondary)))
 	{
-		chMap[std::make_pair(scintDaqType, scintDaqCh)] = std::make_pair(ionChamber_, true);
+		chMap[std::make_pair(scintDaqType, scintDaqCh)] = std::make_pair(ionChamber_, 1);
 	}
 	else
 	{
 		std::cerr << "ERROR: Ion chamber scintillators will not be unpacked!\n";
+	}
+	
+	if (IsInsertable(posDaqType, posDaqCh, ionChamber_, ionChamber_->GetNumChannels(Detector::Secondary)))
+	{
+		chMap[std::make_pair(posDaqType, posDaqCh)] = std::make_pair(ionChamber_, 2);
+	}
+	else
+	{
+		std::cerr << "ERROR: Ion chamber position grids will not be unpacked!\n";
 	}
 
 	return ionChamber_;
@@ -845,7 +908,8 @@ bool GoddessConfig::IsInsertable(short daqType, int daqCh, Detector* det_, int n
 			if (mapItr->first.first == daqType)
 			{
 				Detector *checkDet = mapItr->second.first;
-				bool checkSecondaryType = mapItr->second.second;
+				int checkSecondaryType = mapItr->second.second;
+				//std::cerr<<"checkSecondaryType = "<<checkSecondaryType<<std::endl;
 				int numCh = checkDet->GetNumChannels(checkSecondaryType);
 
 				if (mapItr->first.second + numCh > daqCh)
@@ -901,7 +965,7 @@ Detector *GoddessConfig::SetRawValue(short daqType, short digitizerCh, unsigned 
 
 	--mapItr;
 	Detector *det = mapItr->second.first;
-	bool secondaryType = mapItr->second.second;
+	int secondaryType = mapItr->second.second;
 	int detCh;
 	detCh = digitizerCh - mapItr->first.second;
 
@@ -947,7 +1011,12 @@ Detector *GoddessConfig::SetRawValue(short daqType, short digitizerCh, unsigned 
 	}
 	else if (detType == "IonChamber")
 	{
+		//std::cerr<<"digitizerCh = "<<digitizerCh<<", start channel = "<<mapItr->first.second<<", detCh = "<<detCh<<std::endl;
 		((IonChamber *) det)->SetRawValue(detCh, secondaryType, rawValue, ignThr);
+	}
+	else if (detType == "tdc")
+	{
+		((TDC *) det)->SetRawValue(detCh, secondaryType, rawValue, ignThr);
 	}
 	else
 	{

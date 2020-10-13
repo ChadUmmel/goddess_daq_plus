@@ -457,7 +457,7 @@ int DGSProcessor::BinDgs ( GEB_EVENT* theGEBEvent, DGSEVENT* thedgsEvt )
 
             if ( pars->beta != 0 )
             {
-//                 std::cerr << "Beta used for Doppler Correction: " << pars->beta << std::endl;
+                 std::cerr << "Beta used for Doppler Correction: " << pars->beta << std::endl;
 
                 d1 = angtheta[gsid - 1] / 57.29577951;
                 Energy = Energy * ( 1 - pars->beta * cos ( d1 ) ) / sqrt ( 1 - pars->beta * pars->beta );

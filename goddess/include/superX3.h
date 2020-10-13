@@ -150,7 +150,7 @@ public:
         return binsPolar;
     };
 
-    virtual float GetEnSum ( bool nType = false, bool calibrated = true );
+    virtual float GetEnSum ( int nType = false, bool calibrated = true );
     std::vector<float> GetResEn ( bool calibrated = true );
     float GetNearEn ( bool calibrated = true );
     float GetFarEn ( bool calibrated = true );
@@ -163,7 +163,7 @@ public:
     ///Return the total number of fired contacts above theshold.
     virtual int GetContactMult ( bool calibrated = true );
     ///Return the number of fired contacts above threhsold for the specified type.
-    virtual int GetContactMult ( bool contactType, bool calibrated );
+    virtual int GetContactMult ( int contactType, bool calibrated );
 
     ///Returns the ValueMap of the raw strips ranginf from -1 to +1.
     siDet::ValueMap GetStripPosRaw()
@@ -190,7 +190,7 @@ public:
     virtual void SetGeomParams ( map<string, double> geomInfos_ );
 
     ///Set the raw energy of the contact and compute the calibrated value.
-    virtual void SetRawValue ( unsigned int contact, bool nType, int rawValue, int ignThr );
+    virtual void SetRawValue ( unsigned int contact, int nType, int rawValue, int ignThr );
 
     ///Graph giving the energy shift coefficient to apply as a function of the position interaction in the detector.
     TGraph* enShiftVsPosGraph[4];
@@ -214,7 +214,7 @@ public:
     virtual std::vector<int> GetHitsInfo ( std::string info, std::vector<int>* dest = nullptr );
     virtual std::vector<long long unsigned int> GetHitsInfo ( std::string info, std::vector<long long unsigned int>* dest = nullptr );
     virtual void GetMaxHitInfo ( int* stripMaxP, long long unsigned int* timeSampMaxP, int* stripMaxN, long long unsigned int* timeSampMaxN, bool calibrated = true );
-    virtual int GetMultiplicity ( bool nType = false, bool calibrated = true );
+    virtual int GetMultiplicity ( int nType = false, bool calibrated = true );
 
     /// \cond This is just for ROOT and doesn't need to be documented
     ClassDef ( superX3, 1 );

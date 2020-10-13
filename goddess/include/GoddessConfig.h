@@ -8,6 +8,7 @@
 #include "TClonesArray.h"
 #include "IonChamber.h"
 #include "LiquidScint.h"
+#include "TDC.h"
 
 #include "SolidVector.h"
 
@@ -24,7 +25,7 @@ class GoddessConfig
 		IonChamber *ReadIonChamberConfig(std::istringstream &line);
 
 		///Map of channels to silicon detector.
-		std::map<std::pair<short, short>, std::pair<Detector *, bool>> chMap;
+		std::map<std::pair<short, short>, std::pair<Detector *, int>> chMap;
 		typedef std::pair<short, short> MapKey;
 
 		///Pointer to array of registered superX3 detectors.

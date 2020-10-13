@@ -95,7 +95,6 @@ int main ( int argc, char** argv )
     /* declarations */
     /*--------------*/
 
-
     SortManager* theSortManager = SortManager::sinstance();
     PARS* pars = theSortManager->execParams;
 
@@ -129,7 +128,7 @@ int main ( int argc, char** argv )
     pars->InputSrc = NOTDEF;
     pars->HaveRootFileName = 0;
     pars->GammaProcessor = 0;
-    pars->sphere_split= {0.f,0.f,0.f};
+    pars->sphere_split= {7.061,-3.302,-5.7785,12.37,-3.302,-5.7785};
 
     strcpy ( pars->ConfigFile, "Uninitialized" );
     strcpy ( pars->GeomFile, "goddess.geom" );
@@ -147,6 +146,7 @@ int main ( int argc, char** argv )
     pars->UseShareMemFile = FALSE;
     pars->StartMapAddress = 0;
     sprintf ( pars->ShareMemFile, "GTSort.map" );
+
 
     for ( i = 0; i < MAXDETNO; i++ )
     {
@@ -295,8 +295,8 @@ int main ( int argc, char** argv )
             else if ( ( p = strstr ( argv[j], "-_split" ) ) != NULL )
             {
                 j++;
-//                 sscanf ( argv[j++], "%d", &pars->sphere_split);
-//                 printf ( "The sphere split will be: %d %d %d", pars->sphere_split );
+                 sscanf ( argv[j++], "%d", &pars->sphere_split);
+                 printf ( "The sphere split will be: %d %d %d", pars->sphere_split );
             }
             else if ( ( p = strstr ( argv[j], "-qqq5enadjust" ) ) != NULL )
             {
@@ -554,7 +554,7 @@ int main ( int argc, char** argv )
         printf ( "\nwill read config file from: %s ...\n", pars->ConfigFile );
 
     }
-
+	
     /* now start the sorter */
     if ( HaveChatFile )
     {

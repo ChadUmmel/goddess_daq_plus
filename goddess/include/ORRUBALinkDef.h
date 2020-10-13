@@ -17,6 +17,7 @@
 #pragma link C++ class QQQ5+;
 #pragma link C++ class IonChamber+;
 #pragma link C++ class LiquidScint+;
+#pragma link C++ class TDC+;
 
 #pragma link C++ class ORRUBA+;
 

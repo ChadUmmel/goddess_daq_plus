@@ -127,7 +127,7 @@ void QQQ5::SetGeomParams(map<string, double> geomInfos_)
  *  \param[in] rawValue The raw contact value in channels.
  * \param[in] nType Whether the contact was n Type.
  */
-void QQQ5::SetRawValue(unsigned int contact, bool nType, int rawValue, int ignThr)
+void QQQ5::SetRawValue(unsigned int contact, int nType, int rawValue, int ignThr)
 {
 	if (!ValidContact(contact, nType)) std::cerr << "ERROR: Unable to set raw value for QQQ5 " << serialNum << " " << (nType ? 'n' : 'p') << "-type contact: "
 			<< contact << "!\n";
@@ -136,7 +136,7 @@ void QQQ5::SetRawValue(unsigned int contact, bool nType, int rawValue, int ignTh
 	siDet::SetRawValue(contact, nType, rawValue, ignThr);
 }
 
-float QQQ5::GetEnSum(bool nType, bool calibrated)
+float QQQ5::GetEnSum(int nType, bool calibrated)
 {
 	float enSum = 0.0;
 
@@ -210,7 +210,7 @@ int QQQ5::GetContactMult(bool calibrated)
 	else return enRawP.size() + enRawN.size();
 }
 
-int QQQ5::GetContactMult(bool contactType, bool calibrated)
+int QQQ5::GetContactMult(int contactType, bool calibrated)
 {
 	if (contactType == siDet::nType)
 	{
@@ -306,7 +306,7 @@ void QQQ5::GetMaxHitInfo(int* stripMaxP, long long unsigned int* timeSampMaxP, i
 	}
 }
 
-int QQQ5::GetMultiplicity(bool nType, bool calibrated)
+int QQQ5::GetMultiplicity(int nType, bool calibrated)
 {
 	if (nType && calibrated) return enCalN.size();
 	else if (nType && !calibrated) return enRawN.size();

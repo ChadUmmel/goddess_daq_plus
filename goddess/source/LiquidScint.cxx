@@ -17,7 +17,7 @@ LiquidScint::~LiquidScint()
 
 }
 
-void LiquidScint::SetRawValue ( unsigned int detectorChannel, bool secondaryType, unsigned int rawValue, int /*ignThr*/ )
+void LiquidScint::SetRawValue ( unsigned int detectorChannel, int secondaryType, unsigned int rawValue, int /*ignThr*/ )
 {
     if ( secondaryType )
     {
@@ -44,7 +44,7 @@ void LiquidScint::SetRawValue ( unsigned int detectorChannel, bool secondaryType
 }
 
 ///Dummy definition of SetTimeStamp to avoid warning flood about unused variables...
-void LiquidScint::SetTimeStamp ( unsigned int detectorChannel, bool secondaryType, unsigned long long timestamp )
+void LiquidScint::SetTimeStamp ( unsigned int detectorChannel, int secondaryType, unsigned long long timestamp )
 {
     if ( secondaryType && detectorChannel && timestamp ) {}
 }

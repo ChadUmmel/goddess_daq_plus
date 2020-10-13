@@ -1457,7 +1457,9 @@ int SortManager::GEBacq ( char* ChatFileName )
 // 	    cerr<<"After BinDGOD"<<endl;
             theGODProcessor->BinAGOD ( gebEvt, agodEvt, dgsEvt, gretset, execParams );
 // 	    cerr<<"After BinAGOD"<<endl;
-	    
+            
+            //cerr<<"gebEvt = "<<gebEvt<<",	agodEvt = "<<agodEvt<<",	dfmaEvt = "<<dfmaEvt<<",	dgsEvt = "<<dgsEvt<<",	gretset = "<<gretset<<std::endl;
+            //cerr<<"	theGODProcessor = "<<theGODProcessor->BinGOD ( gebEvt, agodEvt, dfmaEvt, dgsEvt, gretset )<<std::endl;
 
             if ( theGODProcessor->BinGOD ( gebEvt, agodEvt, dfmaEvt, dgsEvt, gretset ) )
             {
