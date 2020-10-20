@@ -14,10 +14,10 @@ make install
 Once the compilation is done, you should add the following lines in your .rootlogon.C to automatically load the goddess_daq libraries when starting ROOT.
 ```
 {  
-      gROOT->ProcessLine(".L <path/to/goddess_daq>/scripts/goddess_analysis_macro.cxx");  
-      gROOT->ProcessLine("goddess_analysis_macro(\"<path/to/goddess_daq>\")");  
+      gROOT->ProcessLine(".L <path/to/goddess_daq_plus>/scripts/goddess_analysis_macro.cxx");  
+      gROOT->ProcessLine("goddess_analysis_macro(\"<path/to/goddess_daq_plus>\")");  
 }  
 ```
-Simply replace <path/to/goddess_daq> with the actual path to the cloned repository.  
+Simply replace <path/to/goddess_daq_plus> with the actual path to the cloned repository.  
 **Replace only the part enclosed in <> (including the < and > sign) while leaving the rest as is.  
 Escaping the quotes properly in the second line is mandatory.**
