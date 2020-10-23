@@ -37,18 +37,18 @@
 namespace std {} using namespace std;
 
 // Header files passed as explicit arguments
-#include "/home/chad/goddess_daq/goddess/include/ORRUBA.h"
-#include "/home/chad/goddess_daq/goddess/include/Detector.h"
-#include "/home/chad/goddess_daq/goddess/include/siDet.h"
-#include "/home/chad/goddess_daq/goddess/include/orrubaDet.h"
-#include "/home/chad/goddess_daq/goddess/include/superX3.h"
-#include "/home/chad/goddess_daq/goddess/include/BB10.h"
-#include "/home/chad/goddess_daq/goddess/include/QQQ5.h"
-#include "/home/chad/goddess_daq/goddess/include/IonChamber.h"
-#include "/home/chad/goddess_daq/goddess/include/LiquidScint.h"
-#include "/home/chad/goddess_daq/goddess/include/TDC.h"
-#include "/home/chad/goddess_daq/goddess/include/SolidVector.h"
-#include "/home/chad/goddess_daq/goddess/include/GoddessConfig.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/ORRUBA.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/Detector.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/siDet.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/orrubaDet.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/superX3.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/BB10.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/QQQ5.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/IonChamber.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/LiquidScint.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/TDC.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/SolidVector.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/GoddessConfig.h"
 
 // Header files passed via #pragma extra_include
 
@@ -1945,28 +1945,28 @@ namespace ROOT {
 namespace {
   void TriggerDictionaryInitialization_ORRUBADictionary_Impl() {
     static const char* headers[] = {
-"/home/chad/goddess_daq/goddess/include/ORRUBA.h",
-"/home/chad/goddess_daq/goddess/include/Detector.h",
-"/home/chad/goddess_daq/goddess/include/siDet.h",
-"/home/chad/goddess_daq/goddess/include/orrubaDet.h",
-"/home/chad/goddess_daq/goddess/include/superX3.h",
-"/home/chad/goddess_daq/goddess/include/BB10.h",
-"/home/chad/goddess_daq/goddess/include/QQQ5.h",
-"/home/chad/goddess_daq/goddess/include/IonChamber.h",
-"/home/chad/goddess_daq/goddess/include/LiquidScint.h",
-"/home/chad/goddess_daq/goddess/include/TDC.h",
-"/home/chad/goddess_daq/goddess/include/SolidVector.h",
-"/home/chad/goddess_daq/goddess/include/GoddessConfig.h",
+"/home/chad/goddess_daq_plus/goddess/include/ORRUBA.h",
+"/home/chad/goddess_daq_plus/goddess/include/Detector.h",
+"/home/chad/goddess_daq_plus/goddess/include/siDet.h",
+"/home/chad/goddess_daq_plus/goddess/include/orrubaDet.h",
+"/home/chad/goddess_daq_plus/goddess/include/superX3.h",
+"/home/chad/goddess_daq_plus/goddess/include/BB10.h",
+"/home/chad/goddess_daq_plus/goddess/include/QQQ5.h",
+"/home/chad/goddess_daq_plus/goddess/include/IonChamber.h",
+"/home/chad/goddess_daq_plus/goddess/include/LiquidScint.h",
+"/home/chad/goddess_daq_plus/goddess/include/TDC.h",
+"/home/chad/goddess_daq_plus/goddess/include/SolidVector.h",
+"/home/chad/goddess_daq_plus/goddess/include/GoddessConfig.h",
 0
     };
     static const char* includePaths[] = {
 "/home/chad/root-6.14.06/builddir/include",
-"/home/chad/goddess_daq/include",
-"/home/chad/goddess_daq/toolbox/include",
-"/home/chad/goddess_daq/goddess/include",
-"/home/chad/goddess_daq/scripts/include",
+"/home/chad/goddess_daq_plus/include",
+"/home/chad/goddess_daq_plus/toolbox/include",
+"/home/chad/goddess_daq_plus/goddess/include",
+"/home/chad/goddess_daq_plus/scripts/include",
 "/home/chad/root-6.14.06/builddir/include",
-"/home/chad/goddess_daq/goddess/source/",
+"/home/chad/goddess_daq_plus/goddess/source/",
 0
     };
     static const char* fwdDeclCode = R"DICTFWDDCLS(
@@ -1977,18 +1977,18 @@ namespace {
 extern int __Cling_Autoloading_Map;
 namespace std{template <typename _Tp> class __attribute__((annotate("$clingAutoload$bits/allocator.h")))  __attribute__((annotate("$clingAutoload$string")))  allocator;
 }
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/orrubaDet.h")))  orrubaDet;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/Detector.h")))  Detector;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/ORRUBA.h")))  ORRUBA;
-class __attribute__((annotate("$clingAutoload$SolidVector.h")))  __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/Detector.h")))  SolidVector;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/siDet.h")))  siDet;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/superX3.h")))  superX3;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/BB10.h")))  BB10;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/QQQ5.h")))  QQQ5;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/IonChamber.h")))  IonChamber;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/LiquidScint.h")))  LiquidScint;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/TDC.h")))  TDC;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessConfig.h")))  GoddessConfig;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/orrubaDet.h")))  orrubaDet;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/Detector.h")))  Detector;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/ORRUBA.h")))  ORRUBA;
+class __attribute__((annotate("$clingAutoload$SolidVector.h")))  __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/Detector.h")))  SolidVector;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/siDet.h")))  siDet;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/superX3.h")))  superX3;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/BB10.h")))  BB10;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/QQQ5.h")))  QQQ5;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/IonChamber.h")))  IonChamber;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/LiquidScint.h")))  LiquidScint;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/TDC.h")))  TDC;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessConfig.h")))  GoddessConfig;
 )DICTFWDDCLS";
     static const char* payloadCode = R"DICTPAYLOAD(
 #line 1 "ORRUBADictionary dictionary payload"
@@ -1998,18 +1998,18 @@ class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/inc
 #endif
 
 #define _BACKWARD_BACKWARD_WARNING_H
-#include "/home/chad/goddess_daq/goddess/include/ORRUBA.h"
-#include "/home/chad/goddess_daq/goddess/include/Detector.h"
-#include "/home/chad/goddess_daq/goddess/include/siDet.h"
-#include "/home/chad/goddess_daq/goddess/include/orrubaDet.h"
-#include "/home/chad/goddess_daq/goddess/include/superX3.h"
-#include "/home/chad/goddess_daq/goddess/include/BB10.h"
-#include "/home/chad/goddess_daq/goddess/include/QQQ5.h"
-#include "/home/chad/goddess_daq/goddess/include/IonChamber.h"
-#include "/home/chad/goddess_daq/goddess/include/LiquidScint.h"
-#include "/home/chad/goddess_daq/goddess/include/TDC.h"
-#include "/home/chad/goddess_daq/goddess/include/SolidVector.h"
-#include "/home/chad/goddess_daq/goddess/include/GoddessConfig.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/ORRUBA.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/Detector.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/siDet.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/orrubaDet.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/superX3.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/BB10.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/QQQ5.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/IonChamber.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/LiquidScint.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/TDC.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/SolidVector.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/GoddessConfig.h"
 
 #undef  _BACKWARD_BACKWARD_WARNING_H
 )DICTPAYLOAD";

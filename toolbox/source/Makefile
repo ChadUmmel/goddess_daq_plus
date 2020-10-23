@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chad/goddess_daq
+CMAKE_SOURCE_DIR = /home/chad/goddess_daq_plus
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chad/goddess_daq
+CMAKE_BINARY_DIR = /home/chad/goddess_daq_plus
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/chad/goddess_daq && $(CMAKE_COMMAND) -E cmake_progress_start /home/chad/goddess_daq/CMakeFiles /home/chad/goddess_daq/toolbox/source/CMakeFiles/progress.marks
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chad/goddess_daq/CMakeFiles 0
+	cd /home/chad/goddess_daq_plus && $(CMAKE_COMMAND) -E cmake_progress_start /home/chad/goddess_daq_plus/CMakeFiles /home/chad/goddess_daq_plus/toolbox/source/CMakeFiles/progress.marks
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chad/goddess_daq_plus/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/clean
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/preinstall
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/preinstall
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/chad/goddess_daq && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/chad/goddess_daq_plus && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 toolbox/source/CMakeFiles/GoddessToolboxLib.dir/rule:
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/CMakeFiles/GoddessToolboxLib.dir/rule
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/CMakeFiles/GoddessToolboxLib.dir/rule
 .PHONY : toolbox/source/CMakeFiles/GoddessToolboxLib.dir/rule
 
 # Convenience name for target.
@@ -168,12 +168,12 @@ GoddessToolboxLib: toolbox/source/CMakeFiles/GoddessToolboxLib.dir/rule
 
 # fast build rule for target.
 GoddessToolboxLib/fast:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessToolboxLib.dir/build.make toolbox/source/CMakeFiles/GoddessToolboxLib.dir/build
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessToolboxLib.dir/build.make toolbox/source/CMakeFiles/GoddessToolboxLib.dir/build
 .PHONY : GoddessToolboxLib/fast
 
 # Convenience name for target.
 toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/rule:
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/rule
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/rule
 .PHONY : toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/rule
 
 # Convenience name for target.
@@ -183,12 +183,12 @@ GODDESSTOOLBOX_OBJECT: toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/rule
 
 # fast build rule for target.
 GODDESSTOOLBOX_OBJECT/fast:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/build.make toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/build
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/build.make toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/build
 .PHONY : GODDESSTOOLBOX_OBJECT/fast
 
 # Convenience name for target.
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/rule:
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/rule
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/rule
 .PHONY : toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/rule
 
 # Convenience name for target.
@@ -198,12 +198,12 @@ GoddessAnalysis_OBJECT: toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/rul
 
 # fast build rule for target.
 GoddessAnalysis_OBJECT/fast:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build
 .PHONY : GoddessAnalysis_OBJECT/fast
 
 # Convenience name for target.
 toolbox/source/CMakeFiles/GoddessAnalysis.dir/rule:
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/CMakeFiles/GoddessAnalysis.dir/rule
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 toolbox/source/CMakeFiles/GoddessAnalysis.dir/rule
 .PHONY : toolbox/source/CMakeFiles/GoddessAnalysis.dir/rule
 
 # Convenience name for target.
@@ -213,7 +213,7 @@ GoddessAnalysis: toolbox/source/CMakeFiles/GoddessAnalysis.dir/rule
 
 # fast build rule for target.
 GoddessAnalysis/fast:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis.dir/build
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis.dir/build
 .PHONY : GoddessAnalysis/fast
 
 GoddessAnalysis.o: GoddessAnalysis.cxx.o
@@ -222,7 +222,7 @@ GoddessAnalysis.o: GoddessAnalysis.cxx.o
 
 # target to build an object file
 GoddessAnalysis.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.o
 .PHONY : GoddessAnalysis.cxx.o
 
 GoddessAnalysis.i: GoddessAnalysis.cxx.i
@@ -231,7 +231,7 @@ GoddessAnalysis.i: GoddessAnalysis.cxx.i
 
 # target to preprocess a source file
 GoddessAnalysis.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.i
 .PHONY : GoddessAnalysis.cxx.i
 
 GoddessAnalysis.s: GoddessAnalysis.cxx.s
@@ -240,7 +240,7 @@ GoddessAnalysis.s: GoddessAnalysis.cxx.s
 
 # target to generate assembly for a file
 GoddessAnalysis.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.s
 .PHONY : GoddessAnalysis.cxx.s
 
 GoddessAnalysisDictionnary.o: GoddessAnalysisDictionnary.cxx.o
@@ -249,7 +249,7 @@ GoddessAnalysisDictionnary.o: GoddessAnalysisDictionnary.cxx.o
 
 # target to build an object file
 GoddessAnalysisDictionnary.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.o
 .PHONY : GoddessAnalysisDictionnary.cxx.o
 
 GoddessAnalysisDictionnary.i: GoddessAnalysisDictionnary.cxx.i
@@ -258,7 +258,7 @@ GoddessAnalysisDictionnary.i: GoddessAnalysisDictionnary.cxx.i
 
 # target to preprocess a source file
 GoddessAnalysisDictionnary.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.i
 .PHONY : GoddessAnalysisDictionnary.cxx.i
 
 GoddessAnalysisDictionnary.s: GoddessAnalysisDictionnary.cxx.s
@@ -267,7 +267,7 @@ GoddessAnalysisDictionnary.s: GoddessAnalysisDictionnary.cxx.s
 
 # target to generate assembly for a file
 GoddessAnalysisDictionnary.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.s
 .PHONY : GoddessAnalysisDictionnary.cxx.s
 
 GoddessCalib.o: GoddessCalib.cxx.o
@@ -276,7 +276,7 @@ GoddessCalib.o: GoddessCalib.cxx.o
 
 # target to build an object file
 GoddessCalib.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.o
 .PHONY : GoddessCalib.cxx.o
 
 GoddessCalib.i: GoddessCalib.cxx.i
@@ -285,7 +285,7 @@ GoddessCalib.i: GoddessCalib.cxx.i
 
 # target to preprocess a source file
 GoddessCalib.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.i
 .PHONY : GoddessCalib.cxx.i
 
 GoddessCalib.s: GoddessCalib.cxx.s
@@ -294,7 +294,7 @@ GoddessCalib.s: GoddessCalib.cxx.s
 
 # target to generate assembly for a file
 GoddessCalib.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.s
 .PHONY : GoddessCalib.cxx.s
 
 GoddessCalibGUI.o: GoddessCalibGUI.cxx.o
@@ -303,7 +303,7 @@ GoddessCalibGUI.o: GoddessCalibGUI.cxx.o
 
 # target to build an object file
 GoddessCalibGUI.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.o
 .PHONY : GoddessCalibGUI.cxx.o
 
 GoddessCalibGUI.i: GoddessCalibGUI.cxx.i
@@ -312,7 +312,7 @@ GoddessCalibGUI.i: GoddessCalibGUI.cxx.i
 
 # target to preprocess a source file
 GoddessCalibGUI.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.i
 .PHONY : GoddessCalibGUI.cxx.i
 
 GoddessCalibGUI.s: GoddessCalibGUI.cxx.s
@@ -321,7 +321,7 @@ GoddessCalibGUI.s: GoddessCalibGUI.cxx.s
 
 # target to generate assembly for a file
 GoddessCalibGUI.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.s
 .PHONY : GoddessCalibGUI.cxx.s
 
 GoddessGeomUtils.o: GoddessGeomUtils.cxx.o
@@ -330,7 +330,7 @@ GoddessGeomUtils.o: GoddessGeomUtils.cxx.o
 
 # target to build an object file
 GoddessGeomUtils.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.o
 .PHONY : GoddessGeomUtils.cxx.o
 
 GoddessGeomUtils.i: GoddessGeomUtils.cxx.i
@@ -339,7 +339,7 @@ GoddessGeomUtils.i: GoddessGeomUtils.cxx.i
 
 # target to preprocess a source file
 GoddessGeomUtils.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.i
 .PHONY : GoddessGeomUtils.cxx.i
 
 GoddessGeomUtils.s: GoddessGeomUtils.cxx.s
@@ -348,7 +348,7 @@ GoddessGeomUtils.s: GoddessGeomUtils.cxx.s
 
 # target to generate assembly for a file
 GoddessGeomUtils.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/build.make toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.s
 .PHONY : GoddessGeomUtils.cxx.s
 
 GoddessToolbox.o: GoddessToolbox.cxx.o
@@ -357,7 +357,7 @@ GoddessToolbox.o: GoddessToolbox.cxx.o
 
 # target to build an object file
 GoddessToolbox.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/build.make toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/GoddessToolbox.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/build.make toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/GoddessToolbox.cxx.o
 .PHONY : GoddessToolbox.cxx.o
 
 GoddessToolbox.i: GoddessToolbox.cxx.i
@@ -366,7 +366,7 @@ GoddessToolbox.i: GoddessToolbox.cxx.i
 
 # target to preprocess a source file
 GoddessToolbox.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/build.make toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/GoddessToolbox.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/build.make toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/GoddessToolbox.cxx.i
 .PHONY : GoddessToolbox.cxx.i
 
 GoddessToolbox.s: GoddessToolbox.cxx.s
@@ -375,7 +375,7 @@ GoddessToolbox.s: GoddessToolbox.cxx.s
 
 # target to generate assembly for a file
 GoddessToolbox.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/build.make toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/GoddessToolbox.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/build.make toolbox/source/CMakeFiles/GODDESSTOOLBOX_OBJECT.dir/GoddessToolbox.cxx.s
 .PHONY : GoddessToolbox.cxx.s
 
 # Help Target
@@ -423,6 +423,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/chad/goddess_daq && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/chad/goddess_daq_plus && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

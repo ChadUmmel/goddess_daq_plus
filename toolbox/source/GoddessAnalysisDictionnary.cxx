@@ -37,9 +37,9 @@
 namespace std {} using namespace std;
 
 // Header files passed as explicit arguments
-#include "/home/chad/goddess_daq/toolbox/include/GoddessAnalysis.h"
-#include "/home/chad/goddess_daq/toolbox/include/GoddessCalib.h"
-#include "/home/chad/goddess_daq/toolbox/include/GoddessGeomUtils.h"
+#include "/home/chad/goddess_daq_plus/toolbox/include/GoddessAnalysis.h"
+#include "/home/chad/goddess_daq_plus/toolbox/include/GoddessCalib.h"
+#include "/home/chad/goddess_daq_plus/toolbox/include/GoddessGeomUtils.h"
 
 // Header files passed via #pragma extra_include
 
@@ -965,19 +965,19 @@ namespace ROOT {
 namespace {
   void TriggerDictionaryInitialization_GoddessAnalysisDictionnary_Impl() {
     static const char* headers[] = {
-"/home/chad/goddess_daq/toolbox/include/GoddessAnalysis.h",
-"/home/chad/goddess_daq/toolbox/include/GoddessCalib.h",
-"/home/chad/goddess_daq/toolbox/include/GoddessGeomUtils.h",
+"/home/chad/goddess_daq_plus/toolbox/include/GoddessAnalysis.h",
+"/home/chad/goddess_daq_plus/toolbox/include/GoddessCalib.h",
+"/home/chad/goddess_daq_plus/toolbox/include/GoddessGeomUtils.h",
 0
     };
     static const char* includePaths[] = {
 "/home/chad/root-6.14.06/builddir/include",
-"/home/chad/goddess_daq/include",
-"/home/chad/goddess_daq/toolbox/include",
-"/home/chad/goddess_daq/goddess/include",
-"/home/chad/goddess_daq/scripts/include",
+"/home/chad/goddess_daq_plus/include",
+"/home/chad/goddess_daq_plus/toolbox/include",
+"/home/chad/goddess_daq_plus/goddess/include",
+"/home/chad/goddess_daq_plus/scripts/include",
 "/home/chad/root-6.14.06/builddir/include",
-"/home/chad/goddess_daq/toolbox/source/",
+"/home/chad/goddess_daq_plus/toolbox/source/",
 0
     };
     static const char* fwdDeclCode = R"DICTFWDDCLS(
@@ -986,9 +986,9 @@ namespace {
 #pragma clang diagnostic ignored "-Wignored-attributes"
 #pragma clang diagnostic ignored "-Wreturn-type-c-linkage"
 extern int __Cling_Autoloading_Map;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/toolbox/include/GoddessAnalysis.h")))  GoddessAnalysis;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/toolbox/include/GoddessCalib.h")))  GoddessCalib;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/toolbox/include/GoddessGeomUtils.h")))  GoddessGeomUtils;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/toolbox/include/GoddessAnalysis.h")))  GoddessAnalysis;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/toolbox/include/GoddessCalib.h")))  GoddessCalib;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/toolbox/include/GoddessGeomUtils.h")))  GoddessGeomUtils;
 )DICTFWDDCLS";
     static const char* payloadCode = R"DICTPAYLOAD(
 #line 1 "GoddessAnalysisDictionnary dictionary payload"
@@ -998,9 +998,9 @@ class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/toolbox/inc
 #endif
 
 #define _BACKWARD_BACKWARD_WARNING_H
-#include "/home/chad/goddess_daq/toolbox/include/GoddessAnalysis.h"
-#include "/home/chad/goddess_daq/toolbox/include/GoddessCalib.h"
-#include "/home/chad/goddess_daq/toolbox/include/GoddessGeomUtils.h"
+#include "/home/chad/goddess_daq_plus/toolbox/include/GoddessAnalysis.h"
+#include "/home/chad/goddess_daq_plus/toolbox/include/GoddessCalib.h"
+#include "/home/chad/goddess_daq_plus/toolbox/include/GoddessGeomUtils.h"
 
 #undef  _BACKWARD_BACKWARD_WARNING_H
 )DICTPAYLOAD";

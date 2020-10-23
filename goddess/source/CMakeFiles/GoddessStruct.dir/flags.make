@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -g -Wextra -Wshadow -Wno-unused-but-set-variable -pedantic -s
 
 CXX_DEFINES = -DGoddessStruct_EXPORTS
 
-CXX_INCLUDES = -I/home/chad/root-6.14.06/builddir/include -I/home/chad/goddess_daq/include -I/home/chad/goddess_daq/toolbox/include -I/home/chad/goddess_daq/goddess/include -I/home/chad/goddess_daq/scripts/include 
+CXX_INCLUDES = -I/home/chad/root-6.14.06/builddir/include -I/home/chad/goddess_daq_plus/include -I/home/chad/goddess_daq_plus/toolbox/include -I/home/chad/goddess_daq_plus/goddess/include -I/home/chad/goddess_daq_plus/scripts/include 
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chad/goddess_daq
+CMAKE_SOURCE_DIR = /home/chad/goddess_daq_plus
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chad/goddess_daq
+CMAKE_BINARY_DIR = /home/chad/goddess_daq_plus
 
 # Include any dependencies generated for this target.
 include hribf/source/CMakeFiles/hribfConvert.dir/depend.make
@@ -59,16 +59,16 @@ include hribf/source/CMakeFiles/hribfConvert.dir/flags.make
 
 hribf/source/CMakeFiles/hribfConvert.dir/ldfConvert.cxx.o: hribf/source/CMakeFiles/hribfConvert.dir/flags.make
 hribf/source/CMakeFiles/hribfConvert.dir/ldfConvert.cxx.o: hribf/source/ldfConvert.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object hribf/source/CMakeFiles/hribfConvert.dir/ldfConvert.cxx.o"
-	cd /home/chad/goddess_daq/hribf/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hribfConvert.dir/ldfConvert.cxx.o -c /home/chad/goddess_daq/hribf/source/ldfConvert.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object hribf/source/CMakeFiles/hribfConvert.dir/ldfConvert.cxx.o"
+	cd /home/chad/goddess_daq_plus/hribf/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hribfConvert.dir/ldfConvert.cxx.o -c /home/chad/goddess_daq_plus/hribf/source/ldfConvert.cxx
 
 hribf/source/CMakeFiles/hribfConvert.dir/ldfConvert.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hribfConvert.dir/ldfConvert.cxx.i"
-	cd /home/chad/goddess_daq/hribf/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq/hribf/source/ldfConvert.cxx > CMakeFiles/hribfConvert.dir/ldfConvert.cxx.i
+	cd /home/chad/goddess_daq_plus/hribf/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq_plus/hribf/source/ldfConvert.cxx > CMakeFiles/hribfConvert.dir/ldfConvert.cxx.i
 
 hribf/source/CMakeFiles/hribfConvert.dir/ldfConvert.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hribfConvert.dir/ldfConvert.cxx.s"
-	cd /home/chad/goddess_daq/hribf/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq/hribf/source/ldfConvert.cxx -o CMakeFiles/hribfConvert.dir/ldfConvert.cxx.s
+	cd /home/chad/goddess_daq_plus/hribf/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq_plus/hribf/source/ldfConvert.cxx -o CMakeFiles/hribfConvert.dir/ldfConvert.cxx.s
 
 hribf/source/CMakeFiles/hribfConvert.dir/ldfConvert.cxx.o.requires:
 
@@ -83,16 +83,16 @@ hribf/source/CMakeFiles/hribfConvert.dir/ldfConvert.cxx.o.provides.build: hribf/
 
 hribf/source/CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.o: hribf/source/CMakeFiles/hribfConvert.dir/flags.make
 hribf/source/CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.o: hribf/source/hribfBuffer.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object hribf/source/CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.o"
-	cd /home/chad/goddess_daq/hribf/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.o -c /home/chad/goddess_daq/hribf/source/hribfBuffer.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object hribf/source/CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.o"
+	cd /home/chad/goddess_daq_plus/hribf/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.o -c /home/chad/goddess_daq_plus/hribf/source/hribfBuffer.cxx
 
 hribf/source/CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.i"
-	cd /home/chad/goddess_daq/hribf/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq/hribf/source/hribfBuffer.cxx > CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.i
+	cd /home/chad/goddess_daq_plus/hribf/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq_plus/hribf/source/hribfBuffer.cxx > CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.i
 
 hribf/source/CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.s"
-	cd /home/chad/goddess_daq/hribf/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq/hribf/source/hribfBuffer.cxx -o CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.s
+	cd /home/chad/goddess_daq_plus/hribf/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq_plus/hribf/source/hribfBuffer.cxx -o CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.s
 
 hribf/source/CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.o.requires:
 
@@ -107,16 +107,16 @@ hribf/source/CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.o.provides.build: hribf
 
 hribf/source/CMakeFiles/hribfConvert.dir/mainBuffer.cxx.o: hribf/source/CMakeFiles/hribfConvert.dir/flags.make
 hribf/source/CMakeFiles/hribfConvert.dir/mainBuffer.cxx.o: hribf/source/mainBuffer.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object hribf/source/CMakeFiles/hribfConvert.dir/mainBuffer.cxx.o"
-	cd /home/chad/goddess_daq/hribf/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hribfConvert.dir/mainBuffer.cxx.o -c /home/chad/goddess_daq/hribf/source/mainBuffer.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object hribf/source/CMakeFiles/hribfConvert.dir/mainBuffer.cxx.o"
+	cd /home/chad/goddess_daq_plus/hribf/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hribfConvert.dir/mainBuffer.cxx.o -c /home/chad/goddess_daq_plus/hribf/source/mainBuffer.cxx
 
 hribf/source/CMakeFiles/hribfConvert.dir/mainBuffer.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hribfConvert.dir/mainBuffer.cxx.i"
-	cd /home/chad/goddess_daq/hribf/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq/hribf/source/mainBuffer.cxx > CMakeFiles/hribfConvert.dir/mainBuffer.cxx.i
+	cd /home/chad/goddess_daq_plus/hribf/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq_plus/hribf/source/mainBuffer.cxx > CMakeFiles/hribfConvert.dir/mainBuffer.cxx.i
 
 hribf/source/CMakeFiles/hribfConvert.dir/mainBuffer.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hribfConvert.dir/mainBuffer.cxx.s"
-	cd /home/chad/goddess_daq/hribf/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq/hribf/source/mainBuffer.cxx -o CMakeFiles/hribfConvert.dir/mainBuffer.cxx.s
+	cd /home/chad/goddess_daq_plus/hribf/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq_plus/hribf/source/mainBuffer.cxx -o CMakeFiles/hribfConvert.dir/mainBuffer.cxx.s
 
 hribf/source/CMakeFiles/hribfConvert.dir/mainBuffer.cxx.o.requires:
 
@@ -143,8 +143,8 @@ hribf/source/hribfConvert: hribf/source/CMakeFiles/hribfConvert.dir/hribfBuffer.
 hribf/source/hribfConvert: hribf/source/CMakeFiles/hribfConvert.dir/mainBuffer.cxx.o
 hribf/source/hribfConvert: hribf/source/CMakeFiles/hribfConvert.dir/build.make
 hribf/source/hribfConvert: hribf/source/CMakeFiles/hribfConvert.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable hribfConvert"
-	cd /home/chad/goddess_daq/hribf/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hribfConvert.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable hribfConvert"
+	cd /home/chad/goddess_daq_plus/hribf/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hribfConvert.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 hribf/source/CMakeFiles/hribfConvert.dir/build: hribf/source/hribfConvert
@@ -158,10 +158,10 @@ hribf/source/CMakeFiles/hribfConvert.dir/requires: hribf/source/CMakeFiles/hribf
 .PHONY : hribf/source/CMakeFiles/hribfConvert.dir/requires
 
 hribf/source/CMakeFiles/hribfConvert.dir/clean:
-	cd /home/chad/goddess_daq/hribf/source && $(CMAKE_COMMAND) -P CMakeFiles/hribfConvert.dir/cmake_clean.cmake
+	cd /home/chad/goddess_daq_plus/hribf/source && $(CMAKE_COMMAND) -P CMakeFiles/hribfConvert.dir/cmake_clean.cmake
 .PHONY : hribf/source/CMakeFiles/hribfConvert.dir/clean
 
 hribf/source/CMakeFiles/hribfConvert.dir/depend:
-	cd /home/chad/goddess_daq && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chad/goddess_daq /home/chad/goddess_daq/hribf/source /home/chad/goddess_daq /home/chad/goddess_daq/hribf/source /home/chad/goddess_daq/hribf/source/CMakeFiles/hribfConvert.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chad/goddess_daq_plus && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chad/goddess_daq_plus /home/chad/goddess_daq_plus/hribf/source /home/chad/goddess_daq_plus /home/chad/goddess_daq_plus/hribf/source /home/chad/goddess_daq_plus/hribf/source/CMakeFiles/hribfConvert.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : hribf/source/CMakeFiles/hribfConvert.dir/depend
 

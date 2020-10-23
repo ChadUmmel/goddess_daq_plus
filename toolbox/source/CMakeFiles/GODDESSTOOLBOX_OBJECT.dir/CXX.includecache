@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/chad/goddess_daq/toolbox/source/GoddessToolbox.cxx
+/home/chad/goddess_daq_plus/toolbox/source/GoddessToolbox.cxx
 GoddessToolbox.h
-/home/chad/goddess_daq/toolbox/source/GoddessToolbox.h
+/home/chad/goddess_daq_plus/toolbox/source/GoddessToolbox.h
 
 /home/chad/root-6.14.06/builddir/include/DllImport.h
 

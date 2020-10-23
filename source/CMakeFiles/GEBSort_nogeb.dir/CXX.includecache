@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/chad/goddess_daq/source/DGSProcessor.cxx
+/home/chad/goddess_daq_plus/source/DGSProcessor.cxx
 GammasphereAngles.h
-/home/chad/goddess_daq/source/GammasphereAngles.h
+/home/chad/goddess_daq_plus/source/GammasphereAngles.h
 DGSProcessor.h
-/home/chad/goddess_daq/source/DGSProcessor.h
+/home/chad/goddess_daq_plus/source/DGSProcessor.h
 
-/home/chad/goddess_daq/source/GEBSort.cxx
+/home/chad/goddess_daq_plus/source/GEBSort.cxx
 SortManager.h
-/home/chad/goddess_daq/source/SortManager.h
+/home/chad/goddess_daq_plus/source/SortManager.h
 stdio.h
 -
 signal.h
@@ -42,35 +42,35 @@ vector
 sys/resource.h
 -
 
-/home/chad/goddess_daq/source/GODProcessor.cxx
+/home/chad/goddess_daq_plus/source/GODProcessor.cxx
 GODProcessor.h
-/home/chad/goddess_daq/source/GODProcessor.h
+/home/chad/goddess_daq_plus/source/GODProcessor.h
 
-/home/chad/goddess_daq/source/GRProcessor.cxx
+/home/chad/goddess_daq_plus/source/GRProcessor.cxx
 GRProcessor.h
-/home/chad/goddess_daq/source/GRProcessor.h
+/home/chad/goddess_daq_plus/source/GRProcessor.h
 
-/home/chad/goddess_daq/source/GoddessData.cxx
+/home/chad/goddess_daq_plus/source/GoddessData.cxx
 GoddessData.h
-/home/chad/goddess_daq/source/GoddessData.h
+/home/chad/goddess_daq_plus/source/GoddessData.h
 TDirectory.h
-/home/chad/goddess_daq/source/TDirectory.h
+/home/chad/goddess_daq_plus/source/TDirectory.h
 TFile.h
-/home/chad/goddess_daq/source/TFile.h
+/home/chad/goddess_daq_plus/source/TFile.h
 TMath.h
-/home/chad/goddess_daq/source/TMath.h
+/home/chad/goddess_daq_plus/source/TMath.h
 Detector.h
-/home/chad/goddess_daq/source/Detector.h
+/home/chad/goddess_daq_plus/source/Detector.h
 QQQ5.h
-/home/chad/goddess_daq/source/QQQ5.h
+/home/chad/goddess_daq_plus/source/QQQ5.h
 superX3.h
-/home/chad/goddess_daq/source/superX3.h
+/home/chad/goddess_daq_plus/source/superX3.h
 BB10.h
-/home/chad/goddess_daq/source/BB10.h
+/home/chad/goddess_daq_plus/source/BB10.h
 LiquidScint.h
-/home/chad/goddess_daq/source/LiquidScint.h
+/home/chad/goddess_daq_plus/source/LiquidScint.h
 TDC.h
-/home/chad/goddess_daq/source/TDC.h
+/home/chad/goddess_daq_plus/source/TDC.h
 iostream
 -
 fstream
@@ -78,19 +78,19 @@ fstream
 TSystem.h
 -
 
-/home/chad/goddess_daq/source/GretProcessor.cxx
+/home/chad/goddess_daq_plus/source/GretProcessor.cxx
 GretProcessor.h
-/home/chad/goddess_daq/source/GretProcessor.h
+/home/chad/goddess_daq_plus/source/GretProcessor.h
 
-/home/chad/goddess_daq/source/SortManager.cxx
+/home/chad/goddess_daq_plus/source/SortManager.cxx
 SortManager.h
-/home/chad/goddess_daq/source/SortManager.h
+/home/chad/goddess_daq_plus/source/SortManager.h
 
-/home/chad/goddess_daq/user/UserEventFilter.cxx
+/home/chad/goddess_daq_plus/user/UserEventFilter.cxx
 iostream
 -
 GoddessData.h
-/home/chad/goddess_daq/user/GoddessData.h
+/home/chad/goddess_daq_plus/user/GoddessData.h
 
 /home/chad/root-6.14.06/builddir/include/DllImport.h
 

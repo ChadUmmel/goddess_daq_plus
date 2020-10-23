@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chad/goddess_daq
+CMAKE_SOURCE_DIR = /home/chad/goddess_daq_plus
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chad/goddess_daq
+CMAKE_BINARY_DIR = /home/chad/goddess_daq_plus
 
 # Include any dependencies generated for this target.
 include goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/depend.make
@@ -59,21 +59,21 @@ include goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/flags.make
 
 goddess/source/GoddessStructDictionary.cxx: goddess/include/GoddessStruct.h
 goddess/source/GoddessStructDictionary.cxx: goddess/include/GoddessLinkDef.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating GoddessStructDictionary.cxx"
-	cd /home/chad/goddess_daq/goddess/source && /home/chad/root-6.14.06/builddir/bin/rootcint -cint -f GoddessStructDictionary.cxx -c -I/home/chad/root-6.14.06/builddir/include -I/home/chad/goddess_daq/include -I/home/chad/goddess_daq/toolbox/include -I/home/chad/goddess_daq/goddess/include -I/home/chad/goddess_daq/scripts/include /home/chad/goddess_daq/goddess/include/GoddessStruct.h /home/chad/goddess_daq/goddess/include/GoddessLinkDef.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating GoddessStructDictionary.cxx"
+	cd /home/chad/goddess_daq_plus/goddess/source && /home/chad/root-6.14.06/builddir/bin/rootcint -cint -f GoddessStructDictionary.cxx -c -I/home/chad/root-6.14.06/builddir/include -I/home/chad/goddess_daq_plus/include -I/home/chad/goddess_daq_plus/toolbox/include -I/home/chad/goddess_daq_plus/goddess/include -I/home/chad/goddess_daq_plus/scripts/include /home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h /home/chad/goddess_daq_plus/goddess/include/GoddessLinkDef.h
 
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o: goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/flags.make
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o: goddess/source/GoddessStruct.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o"
-	cd /home/chad/goddess_daq/goddess/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o -c /home/chad/goddess_daq/goddess/source/GoddessStruct.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o"
+	cd /home/chad/goddess_daq_plus/goddess/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o -c /home/chad/goddess_daq_plus/goddess/source/GoddessStruct.cxx
 
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.i"
-	cd /home/chad/goddess_daq/goddess/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq/goddess/source/GoddessStruct.cxx > CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.i
+	cd /home/chad/goddess_daq_plus/goddess/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq_plus/goddess/source/GoddessStruct.cxx > CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.i
 
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.s"
-	cd /home/chad/goddess_daq/goddess/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq/goddess/source/GoddessStruct.cxx -o CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.s
+	cd /home/chad/goddess_daq_plus/goddess/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq_plus/goddess/source/GoddessStruct.cxx -o CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.s
 
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o.requires:
 
@@ -88,16 +88,16 @@ goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o.provides.
 
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.o: goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/flags.make
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.o: goddess/source/GoddessStructDictionary.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.o"
-	cd /home/chad/goddess_daq/goddess/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.o -c /home/chad/goddess_daq/goddess/source/GoddessStructDictionary.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.o"
+	cd /home/chad/goddess_daq_plus/goddess/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.o -c /home/chad/goddess_daq_plus/goddess/source/GoddessStructDictionary.cxx
 
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.i"
-	cd /home/chad/goddess_daq/goddess/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq/goddess/source/GoddessStructDictionary.cxx > CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.i
+	cd /home/chad/goddess_daq_plus/goddess/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq_plus/goddess/source/GoddessStructDictionary.cxx > CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.i
 
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.s"
-	cd /home/chad/goddess_daq/goddess/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq/goddess/source/GoddessStructDictionary.cxx -o CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.s
+	cd /home/chad/goddess_daq_plus/goddess/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq_plus/goddess/source/GoddessStructDictionary.cxx -o CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.s
 
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.o.requires:
 
@@ -127,10 +127,10 @@ goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/requires: goddess/source/CMak
 .PHONY : goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/requires
 
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/clean:
-	cd /home/chad/goddess_daq/goddess/source && $(CMAKE_COMMAND) -P CMakeFiles/GoddessStruct_OBJECT.dir/cmake_clean.cmake
+	cd /home/chad/goddess_daq_plus/goddess/source && $(CMAKE_COMMAND) -P CMakeFiles/GoddessStruct_OBJECT.dir/cmake_clean.cmake
 .PHONY : goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/clean
 
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/depend: goddess/source/GoddessStructDictionary.cxx
-	cd /home/chad/goddess_daq && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chad/goddess_daq /home/chad/goddess_daq/goddess/source /home/chad/goddess_daq /home/chad/goddess_daq/goddess/source /home/chad/goddess_daq/goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chad/goddess_daq_plus && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chad/goddess_daq_plus /home/chad/goddess_daq_plus/goddess/source /home/chad/goddess_daq_plus /home/chad/goddess_daq_plus/goddess/source /home/chad/goddess_daq_plus/goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/depend
 

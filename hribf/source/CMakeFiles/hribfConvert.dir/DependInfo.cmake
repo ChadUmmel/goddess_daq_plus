@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/chad/goddess_daq/hribf/source/hribfBuffer.cxx" "/home/chad/goddess_daq/hribf/source/CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.o"
-  "/home/chad/goddess_daq/hribf/source/ldfConvert.cxx" "/home/chad/goddess_daq/hribf/source/CMakeFiles/hribfConvert.dir/ldfConvert.cxx.o"
-  "/home/chad/goddess_daq/hribf/source/mainBuffer.cxx" "/home/chad/goddess_daq/hribf/source/CMakeFiles/hribfConvert.dir/mainBuffer.cxx.o"
+  "/home/chad/goddess_daq_plus/hribf/source/hribfBuffer.cxx" "/home/chad/goddess_daq_plus/hribf/source/CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.o"
+  "/home/chad/goddess_daq_plus/hribf/source/ldfConvert.cxx" "/home/chad/goddess_daq_plus/hribf/source/CMakeFiles/hribfConvert.dir/ldfConvert.cxx.o"
+  "/home/chad/goddess_daq_plus/hribf/source/mainBuffer.cxx" "/home/chad/goddess_daq_plus/hribf/source/CMakeFiles/hribfConvert.dir/mainBuffer.cxx.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

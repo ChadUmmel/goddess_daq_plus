@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -g -Wextra -Wshadow -Wno-unused-but-set-variable -pedantic -s
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/chad/root-6.14.06/builddir/include -I/home/chad/goddess_daq/hribf/include 
+CXX_INCLUDES = -I/home/chad/root-6.14.06/builddir/include -I/home/chad/goddess_daq_plus/hribf/include 
 

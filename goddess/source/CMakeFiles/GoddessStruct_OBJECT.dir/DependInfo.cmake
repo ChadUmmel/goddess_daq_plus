@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/chad/goddess_daq/goddess/source/GoddessStruct.cxx" "/home/chad/goddess_daq/goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o"
-  "/home/chad/goddess_daq/goddess/source/GoddessStructDictionary.cxx" "/home/chad/goddess_daq/goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.o"
+  "/home/chad/goddess_daq_plus/goddess/source/GoddessStruct.cxx" "/home/chad/goddess_daq_plus/goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o"
+  "/home/chad/goddess_daq_plus/goddess/source/GoddessStructDictionary.cxx" "/home/chad/goddess_daq_plus/goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

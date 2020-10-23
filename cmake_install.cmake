@@ -1,8 +1,8 @@
-# Install script for directory: /home/chad/goddess_daq
+# Install script for directory: /home/chad/goddess_daq_plus
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/chad/goddess_daq/exec")
+  set(CMAKE_INSTALL_PREFIX "/home/chad/goddess_daq_plus/exec")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,108 +39,108 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/chad/goddess_daq/exec/chatfiles")
+   "/home/chad/goddess_daq_plus/exec/chatfiles")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/chad/goddess_daq/exec" TYPE DIRECTORY FILES "/home/chad/goddess_daq/chatfiles")
+file(INSTALL DESTINATION "/home/chad/goddess_daq_plus/exec" TYPE DIRECTORY FILES "/home/chad/goddess_daq_plus/chatfiles")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/chad/goddess_daq/exec/crmat.LINUX;/home/chad/goddess_daq/exec/AGATA_crmat.dat;/home/chad/goddess_daq/exec/dgscal.dat;/home/chad/goddess_daq/exec/map.dat;/home/chad/goddess_daq/exec/.rootlogon.C;/home/chad/goddess_daq/exec/mass_db.dat;/home/chad/goddess_daq/exec/goddess.reacinfo")
+   "/home/chad/goddess_daq_plus/exec/crmat.LINUX;/home/chad/goddess_daq_plus/exec/AGATA_crmat.dat;/home/chad/goddess_daq_plus/exec/dgscal.dat;/home/chad/goddess_daq_plus/exec/map.dat;/home/chad/goddess_daq_plus/exec/.rootlogon.C;/home/chad/goddess_daq_plus/exec/mass_db.dat;/home/chad/goddess_daq_plus/exec/goddess.reacinfo")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/chad/goddess_daq/exec" TYPE FILE FILES
-    "/home/chad/goddess_daq/share/crmat.LINUX"
-    "/home/chad/goddess_daq/share/AGATA_crmat.dat"
-    "/home/chad/goddess_daq/share/dgscal.dat"
-    "/home/chad/goddess_daq/share/map.dat"
-    "/home/chad/goddess_daq/share/.rootlogon.C"
-    "/home/chad/goddess_daq/share/mass_db.dat"
-    "/home/chad/goddess_daq/share/goddess.reacinfo"
+file(INSTALL DESTINATION "/home/chad/goddess_daq_plus/exec" TYPE FILE FILES
+    "/home/chad/goddess_daq_plus/share/crmat.LINUX"
+    "/home/chad/goddess_daq_plus/share/AGATA_crmat.dat"
+    "/home/chad/goddess_daq_plus/share/dgscal.dat"
+    "/home/chad/goddess_daq_plus/share/map.dat"
+    "/home/chad/goddess_daq_plus/share/.rootlogon.C"
+    "/home/chad/goddess_daq_plus/share/mass_db.dat"
+    "/home/chad/goddess_daq_plus/share/goddess.reacinfo"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/chad/goddess_daq/exec/goddess.config;/home/chad/goddess_daq/exec/goddess_134Xe_alex_r136.config;/home/chad/goddess_daq/exec/goddess_134Xe_nothresholds.config;/home/chad/goddess_daq/exec/goddess_134Xe_runs41_to_146.config;/home/chad/goddess_daq/exec/goddess_95Mo_runs200_to_352.config")
+   "/home/chad/goddess_daq_plus/exec/goddess.config;/home/chad/goddess_daq_plus/exec/goddess_134Xe_alex_r136.config;/home/chad/goddess_daq_plus/exec/goddess_134Xe_nothresholds.config;/home/chad/goddess_daq_plus/exec/goddess_134Xe_runs41_to_146.config;/home/chad/goddess_daq_plus/exec/goddess_95Mo_runs200_to_352.config")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/chad/goddess_daq/exec" TYPE FILE FILES
-    "/home/chad/goddess_daq/share/goddess.config"
-    "/home/chad/goddess_daq/share/goddess_134Xe_alex_r136.config"
-    "/home/chad/goddess_daq/share/goddess_134Xe_nothresholds.config"
-    "/home/chad/goddess_daq/share/goddess_134Xe_runs41_to_146.config"
-    "/home/chad/goddess_daq/share/goddess_95Mo_runs200_to_352.config"
+file(INSTALL DESTINATION "/home/chad/goddess_daq_plus/exec" TYPE FILE FILES
+    "/home/chad/goddess_daq_plus/share/goddess.config"
+    "/home/chad/goddess_daq_plus/share/goddess_134Xe_alex_r136.config"
+    "/home/chad/goddess_daq_plus/share/goddess_134Xe_nothresholds.config"
+    "/home/chad/goddess_daq_plus/share/goddess_134Xe_runs41_to_146.config"
+    "/home/chad/goddess_daq_plus/share/goddess_95Mo_runs200_to_352.config"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/chad/goddess_daq/exec/goddess.geom;/home/chad/goddess_daq/exec/goddess_test.geom")
+   "/home/chad/goddess_daq_plus/exec/goddess.geom;/home/chad/goddess_daq_plus/exec/goddess_test.geom")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/chad/goddess_daq/exec" TYPE FILE FILES
-    "/home/chad/goddess_daq/share/goddess.geom"
-    "/home/chad/goddess_daq/share/goddess_test.geom"
+file(INSTALL DESTINATION "/home/chad/goddess_daq_plus/exec" TYPE FILE FILES
+    "/home/chad/goddess_daq_plus/share/goddess.geom"
+    "/home/chad/goddess_daq_plus/share/goddess_test.geom"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/chad/goddess_daq/exec/EnShift_vs_Pos_2_May_2017.root;/home/chad/goddess_daq/exec/SX3_En_vs_Pos_graphs.root")
+   "/home/chad/goddess_daq_plus/exec/EnShift_vs_Pos_2_May_2017.root;/home/chad/goddess_daq_plus/exec/SX3_En_vs_Pos_graphs.root")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/chad/goddess_daq/exec" TYPE FILE FILES
-    "/home/chad/goddess_daq/share/EnShift_vs_Pos_2_May_2017.root"
-    "/home/chad/goddess_daq/share/SX3_En_vs_Pos_graphs.root"
+file(INSTALL DESTINATION "/home/chad/goddess_daq_plus/exec" TYPE FILE FILES
+    "/home/chad/goddess_daq_plus/share/EnShift_vs_Pos_2_May_2017.root"
+    "/home/chad/goddess_daq_plus/share/SX3_En_vs_Pos_graphs.root"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/chad/goddess_daq/exec/ranges_tables/134Xe_in_C2D4_1063mg_cm3.txt;/home/chad/goddess_daq/exec/ranges_tables/95Mo_in_C2D4_1063mg_cm3.txt;/home/chad/goddess_daq/exec/ranges_tables/README.txt;/home/chad/goddess_daq/exec/ranges_tables/p_in_C2D4_1036mg_cm3.txt")
+   "/home/chad/goddess_daq_plus/exec/ranges_tables/134Xe_in_C2D4_1063mg_cm3.txt;/home/chad/goddess_daq_plus/exec/ranges_tables/95Mo_in_C2D4_1063mg_cm3.txt;/home/chad/goddess_daq_plus/exec/ranges_tables/README.txt;/home/chad/goddess_daq_plus/exec/ranges_tables/p_in_C2D4_1036mg_cm3.txt")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/chad/goddess_daq/exec/ranges_tables" TYPE FILE FILES
-    "/home/chad/goddess_daq/share/ranges_tables/134Xe_in_C2D4_1063mg_cm3.txt"
-    "/home/chad/goddess_daq/share/ranges_tables/95Mo_in_C2D4_1063mg_cm3.txt"
-    "/home/chad/goddess_daq/share/ranges_tables/README.txt"
-    "/home/chad/goddess_daq/share/ranges_tables/p_in_C2D4_1036mg_cm3.txt"
+file(INSTALL DESTINATION "/home/chad/goddess_daq_plus/exec/ranges_tables" TYPE FILE FILES
+    "/home/chad/goddess_daq_plus/share/ranges_tables/134Xe_in_C2D4_1063mg_cm3.txt"
+    "/home/chad/goddess_daq_plus/share/ranges_tables/95Mo_in_C2D4_1063mg_cm3.txt"
+    "/home/chad/goddess_daq_plus/share/ranges_tables/README.txt"
+    "/home/chad/goddess_daq_plus/share/ranges_tables/p_in_C2D4_1036mg_cm3.txt"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/chad/goddess_daq/hribf/cmake_install.cmake")
-  include("/home/chad/goddess_daq/toolbox/source/cmake_install.cmake")
-  include("/home/chad/goddess_daq/goddess/source/cmake_install.cmake")
-  include("/home/chad/goddess_daq/source/cmake_install.cmake")
-  include("/home/chad/goddess_daq/scripts/cmake_install.cmake")
+  include("/home/chad/goddess_daq_plus/hribf/cmake_install.cmake")
+  include("/home/chad/goddess_daq_plus/toolbox/source/cmake_install.cmake")
+  include("/home/chad/goddess_daq_plus/goddess/source/cmake_install.cmake")
+  include("/home/chad/goddess_daq_plus/source/cmake_install.cmake")
+  include("/home/chad/goddess_daq_plus/scripts/cmake_install.cmake")
 
 endif()
 
@@ -152,5 +152,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/chad/goddess_daq/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/chad/goddess_daq_plus/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

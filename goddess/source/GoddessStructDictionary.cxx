@@ -37,7 +37,7 @@
 namespace std {} using namespace std;
 
 // Header files passed as explicit arguments
-#include "/home/chad/goddess_daq/goddess/include/GoddessStruct.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h"
 
 // Header files passed via #pragma extra_include
 
@@ -473,51 +473,6 @@ namespace ROOT {
    }
 
    static void IonData_TClassManip(TClass* ){
-   }
-
-} // end of namespace ROOT
-
-namespace ROOT {
-   static TClass *TDCData_Dictionary();
-   static void TDCData_TClassManip(TClass*);
-   static void *new_TDCData(void *p = 0);
-   static void *newArray_TDCData(Long_t size, void *p);
-   static void delete_TDCData(void *p);
-   static void deleteArray_TDCData(void *p);
-   static void destruct_TDCData(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const ::TDCData*)
-   {
-      ::TDCData *ptr = 0;
-      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::TDCData));
-      static ::ROOT::TGenericClassInfo 
-         instance("TDCData", "GoddessStruct.h", 353,
-                  typeid(::TDCData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
-                  &TDCData_Dictionary, isa_proxy, 4,
-                  sizeof(::TDCData) );
-      instance.SetNew(&new_TDCData);
-      instance.SetNewArray(&newArray_TDCData);
-      instance.SetDelete(&delete_TDCData);
-      instance.SetDeleteArray(&deleteArray_TDCData);
-      instance.SetDestructor(&destruct_TDCData);
-      return &instance;
-   }
-   TGenericClassInfo *GenerateInitInstance(const ::TDCData*)
-   {
-      return GenerateInitInstanceLocal((::TDCData*)0);
-   }
-   // Static variable to force the class initialization
-   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::TDCData*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static TClass *TDCData_Dictionary() {
-      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::TDCData*)0x0)->GetClass();
-      TDCData_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void TDCData_TClassManip(TClass* ){
    }
 
 } // end of namespace ROOT
@@ -1408,27 +1363,6 @@ namespace ROOT {
 
 namespace ROOT {
    // Wrappers around operator new
-   static void *new_TDCData(void *p) {
-      return  p ? new(p) ::TDCData : new ::TDCData;
-   }
-   static void *newArray_TDCData(Long_t nElements, void *p) {
-      return p ? new(p) ::TDCData[nElements] : new ::TDCData[nElements];
-   }
-   // Wrapper around operator delete
-   static void delete_TDCData(void *p) {
-      delete ((::TDCData*)p);
-   }
-   static void deleteArray_TDCData(void *p) {
-      delete [] ((::TDCData*)p);
-   }
-   static void destruct_TDCData(void *p) {
-      typedef ::TDCData current_t;
-      ((current_t*)p)->~current_t();
-   }
-} // end of namespace ROOT for class ::TDCData
-
-namespace ROOT {
-   // Wrappers around operator new
    static void *new_GSRawData(void *p) {
       return  p ? new(p) ::GSRawData : new ::GSRawData;
    }
@@ -2145,69 +2079,6 @@ namespace ROOT {
 } // end of namespace ROOT for class vector<IonData>
 
 namespace ROOT {
-   static TClass *vectorlETDCDatagR_Dictionary();
-   static void vectorlETDCDatagR_TClassManip(TClass*);
-   static void *new_vectorlETDCDatagR(void *p = 0);
-   static void *newArray_vectorlETDCDatagR(Long_t size, void *p);
-   static void delete_vectorlETDCDatagR(void *p);
-   static void deleteArray_vectorlETDCDatagR(void *p);
-   static void destruct_vectorlETDCDatagR(void *p);
-
-   // Function generating the singleton type initializer
-   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<TDCData>*)
-   {
-      vector<TDCData> *ptr = 0;
-      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<TDCData>));
-      static ::ROOT::TGenericClassInfo 
-         instance("vector<TDCData>", -2, "vector", 216,
-                  typeid(vector<TDCData>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
-                  &vectorlETDCDatagR_Dictionary, isa_proxy, 4,
-                  sizeof(vector<TDCData>) );
-      instance.SetNew(&new_vectorlETDCDatagR);
-      instance.SetNewArray(&newArray_vectorlETDCDatagR);
-      instance.SetDelete(&delete_vectorlETDCDatagR);
-      instance.SetDeleteArray(&deleteArray_vectorlETDCDatagR);
-      instance.SetDestructor(&destruct_vectorlETDCDatagR);
-      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<TDCData> >()));
-      return &instance;
-   }
-   // Static variable to force the class initialization
-   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<TDCData>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
-
-   // Dictionary for non-ClassDef classes
-   static TClass *vectorlETDCDatagR_Dictionary() {
-      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<TDCData>*)0x0)->GetClass();
-      vectorlETDCDatagR_TClassManip(theClass);
-   return theClass;
-   }
-
-   static void vectorlETDCDatagR_TClassManip(TClass* ){
-   }
-
-} // end of namespace ROOT
-
-namespace ROOT {
-   // Wrappers around operator new
-   static void *new_vectorlETDCDatagR(void *p) {
-      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<TDCData> : new vector<TDCData>;
-   }
-   static void *newArray_vectorlETDCDatagR(Long_t nElements, void *p) {
-      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<TDCData>[nElements] : new vector<TDCData>[nElements];
-   }
-   // Wrapper around operator delete
-   static void delete_vectorlETDCDatagR(void *p) {
-      delete ((vector<TDCData>*)p);
-   }
-   static void deleteArray_vectorlETDCDatagR(void *p) {
-      delete [] ((vector<TDCData>*)p);
-   }
-   static void destruct_vectorlETDCDatagR(void *p) {
-      typedef vector<TDCData> current_t;
-      ((current_t*)p)->~current_t();
-   }
-} // end of namespace ROOT for class vector<TDCData>
-
-namespace ROOT {
    static TClass *vectorlEGretDatagR_Dictionary();
    static void vectorlEGretDatagR_TClassManip(TClass*);
    static void *new_vectorlEGretDatagR(void *p = 0);
@@ -2462,17 +2333,17 @@ namespace ROOT {
 namespace {
   void TriggerDictionaryInitialization_GoddessStructDictionary_Impl() {
     static const char* headers[] = {
-"/home/chad/goddess_daq/goddess/include/GoddessStruct.h",
+"/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h",
 0
     };
     static const char* includePaths[] = {
 "/home/chad/root-6.14.06/builddir/include",
-"/home/chad/goddess_daq/include",
-"/home/chad/goddess_daq/toolbox/include",
-"/home/chad/goddess_daq/goddess/include",
-"/home/chad/goddess_daq/scripts/include",
+"/home/chad/goddess_daq_plus/include",
+"/home/chad/goddess_daq_plus/toolbox/include",
+"/home/chad/goddess_daq_plus/goddess/include",
+"/home/chad/goddess_daq_plus/scripts/include",
 "/home/chad/root-6.14.06/builddir/include",
-"/home/chad/goddess_daq/goddess/source/",
+"/home/chad/goddess_daq_plus/goddess/source/",
 0
     };
     static const char* fwdDeclCode = R"DICTFWDDCLS(
@@ -2481,21 +2352,20 @@ namespace {
 #pragma clang diagnostic ignored "-Wignored-attributes"
 #pragma clang diagnostic ignored "-Wreturn-type-c-linkage"
 extern int __Cling_Autoloading_Map;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  ChValPair;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  ChValPair;
 namespace std{template <typename _Tp> class __attribute__((annotate("$clingAutoload$bits/allocator.h")))  __attribute__((annotate("$clingAutoload$string")))  allocator;
 }
-struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  GretData;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  ORRUBARawData;
-struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  GSRawData;
-struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  IonData;
-struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  TDCData;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  SiDataDetailed;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  SiDataBase;
-struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  GamData;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  SiDetEnStripInfo;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  GoddessGeomInfos;
-class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  GoddessReacInfos;
-template <class pairType> class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq/goddess/include/GoddessStruct.h")))  PNPair;
+struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  GretData;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  ORRUBARawData;
+struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  GSRawData;
+struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  IonData;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  SiDataDetailed;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  SiDataBase;
+struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  GamData;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  SiDetEnStripInfo;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  GoddessGeomInfos;
+class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  GoddessReacInfos;
+template <class pairType> class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  PNPair;
 
 )DICTFWDDCLS";
     static const char* payloadCode = R"DICTPAYLOAD(
@@ -2506,7 +2376,7 @@ template <class pairType> class __attribute__((annotate("$clingAutoload$/home/ch
 #endif
 
 #define _BACKWARD_BACKWARD_WARNING_H
-#include "/home/chad/goddess_daq/goddess/include/GoddessStruct.h"
+#include "/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h"
 
 #undef  _BACKWARD_BACKWARD_WARNING_H
 )DICTPAYLOAD";
@@ -2518,7 +2388,6 @@ template <class pairType> class __attribute__((annotate("$clingAutoload$/home/ch
 "GoddessReacInfos", payloadCode, "@",
 "GretData", payloadCode, "@",
 "IonData", payloadCode, "@",
-"TDCData", payloadCode, "@",
 "ORRUBARawData", payloadCode, "@",
 "PNPair<ULong64_t int>", payloadCode, "@",
 "PNPair<ULong64_t>", payloadCode, "@",

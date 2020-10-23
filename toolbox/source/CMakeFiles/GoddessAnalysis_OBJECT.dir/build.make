@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chad/goddess_daq
+CMAKE_SOURCE_DIR = /home/chad/goddess_daq_plus
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chad/goddess_daq
+CMAKE_BINARY_DIR = /home/chad/goddess_daq_plus
 
 # Include any dependencies generated for this target.
 include toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/depend.make
@@ -61,21 +61,21 @@ toolbox/source/GoddessAnalysisDictionnary.cxx: toolbox/include/GoddessAnalysis.h
 toolbox/source/GoddessAnalysisDictionnary.cxx: toolbox/include/GoddessCalib.h
 toolbox/source/GoddessAnalysisDictionnary.cxx: toolbox/include/GoddessGeomUtils.h
 toolbox/source/GoddessAnalysisDictionnary.cxx: toolbox/include/GoddessAnalysisClassesLinkDef.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating GoddessAnalysisDictionnary.cxx"
-	cd /home/chad/goddess_daq/toolbox/source && /home/chad/root-6.14.06/builddir/bin/rootcint -cint -f GoddessAnalysisDictionnary.cxx -c -I/home/chad/root-6.14.06/builddir/include -I/home/chad/goddess_daq/include -I/home/chad/goddess_daq/toolbox/include -I/home/chad/goddess_daq/goddess/include -I/home/chad/goddess_daq/scripts/include /home/chad/goddess_daq/toolbox/include/GoddessAnalysis.h /home/chad/goddess_daq/toolbox/include/GoddessCalib.h /home/chad/goddess_daq/toolbox/include/GoddessGeomUtils.h /home/chad/goddess_daq/toolbox/include/GoddessAnalysisClassesLinkDef.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating GoddessAnalysisDictionnary.cxx"
+	cd /home/chad/goddess_daq_plus/toolbox/source && /home/chad/root-6.14.06/builddir/bin/rootcint -cint -f GoddessAnalysisDictionnary.cxx -c -I/home/chad/root-6.14.06/builddir/include -I/home/chad/goddess_daq_plus/include -I/home/chad/goddess_daq_plus/toolbox/include -I/home/chad/goddess_daq_plus/goddess/include -I/home/chad/goddess_daq_plus/scripts/include /home/chad/goddess_daq_plus/toolbox/include/GoddessAnalysis.h /home/chad/goddess_daq_plus/toolbox/include/GoddessCalib.h /home/chad/goddess_daq_plus/toolbox/include/GoddessGeomUtils.h /home/chad/goddess_daq_plus/toolbox/include/GoddessAnalysisClassesLinkDef.h
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.o: toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/flags.make
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.o: toolbox/source/GoddessAnalysis.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.o"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.o -c /home/chad/goddess_daq/toolbox/source/GoddessAnalysis.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.o"
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.o -c /home/chad/goddess_daq_plus/toolbox/source/GoddessAnalysis.cxx
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.i"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq/toolbox/source/GoddessAnalysis.cxx > CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.i
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq_plus/toolbox/source/GoddessAnalysis.cxx > CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.i
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.s"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq/toolbox/source/GoddessAnalysis.cxx -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.s
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq_plus/toolbox/source/GoddessAnalysis.cxx -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.s
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.o.requires:
 
@@ -90,16 +90,16 @@ toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysis.cxx.o.provi
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.o: toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/flags.make
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.o: toolbox/source/GoddessCalib.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.o"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.o -c /home/chad/goddess_daq/toolbox/source/GoddessCalib.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.o"
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.o -c /home/chad/goddess_daq_plus/toolbox/source/GoddessCalib.cxx
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.i"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq/toolbox/source/GoddessCalib.cxx > CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.i
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq_plus/toolbox/source/GoddessCalib.cxx > CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.i
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.s"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq/toolbox/source/GoddessCalib.cxx -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.s
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq_plus/toolbox/source/GoddessCalib.cxx -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.s
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.o.requires:
 
@@ -114,16 +114,16 @@ toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalib.cxx.o.provides
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.o: toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/flags.make
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.o: toolbox/source/GoddessCalibGUI.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.o"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.o -c /home/chad/goddess_daq/toolbox/source/GoddessCalibGUI.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.o"
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.o -c /home/chad/goddess_daq_plus/toolbox/source/GoddessCalibGUI.cxx
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.i"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq/toolbox/source/GoddessCalibGUI.cxx > CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.i
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq_plus/toolbox/source/GoddessCalibGUI.cxx > CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.i
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.s"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq/toolbox/source/GoddessCalibGUI.cxx -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.s
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq_plus/toolbox/source/GoddessCalibGUI.cxx -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.s
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.o.requires:
 
@@ -138,16 +138,16 @@ toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessCalibGUI.cxx.o.provi
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.o: toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/flags.make
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.o: toolbox/source/GoddessGeomUtils.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.o"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.o -c /home/chad/goddess_daq/toolbox/source/GoddessGeomUtils.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.o"
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.o -c /home/chad/goddess_daq_plus/toolbox/source/GoddessGeomUtils.cxx
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.i"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq/toolbox/source/GoddessGeomUtils.cxx > CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.i
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq_plus/toolbox/source/GoddessGeomUtils.cxx > CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.i
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.s"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq/toolbox/source/GoddessGeomUtils.cxx -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.s
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq_plus/toolbox/source/GoddessGeomUtils.cxx -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.s
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.o.requires:
 
@@ -162,16 +162,16 @@ toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessGeomUtils.cxx.o.prov
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.o: toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/flags.make
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.o: toolbox/source/GoddessAnalysisDictionnary.cxx
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.o"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.o -c /home/chad/goddess_daq/toolbox/source/GoddessAnalysisDictionnary.cxx
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/goddess_daq_plus/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.o"
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.o -c /home/chad/goddess_daq_plus/toolbox/source/GoddessAnalysisDictionnary.cxx
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.i"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq/toolbox/source/GoddessAnalysisDictionnary.cxx > CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.i
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/chad/goddess_daq_plus/toolbox/source/GoddessAnalysisDictionnary.cxx > CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.i
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.s"
-	cd /home/chad/goddess_daq/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq/toolbox/source/GoddessAnalysisDictionnary.cxx -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.s
+	cd /home/chad/goddess_daq_plus/toolbox/source && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/chad/goddess_daq_plus/toolbox/source/GoddessAnalysisDictionnary.cxx -o CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.s
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/GoddessAnalysisDictionnary.cxx.o.requires:
 
@@ -207,10 +207,10 @@ toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/requires: toolbox/source/CM
 .PHONY : toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/requires
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/clean:
-	cd /home/chad/goddess_daq/toolbox/source && $(CMAKE_COMMAND) -P CMakeFiles/GoddessAnalysis_OBJECT.dir/cmake_clean.cmake
+	cd /home/chad/goddess_daq_plus/toolbox/source && $(CMAKE_COMMAND) -P CMakeFiles/GoddessAnalysis_OBJECT.dir/cmake_clean.cmake
 .PHONY : toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/clean
 
 toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/depend: toolbox/source/GoddessAnalysisDictionnary.cxx
-	cd /home/chad/goddess_daq && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chad/goddess_daq /home/chad/goddess_daq/toolbox/source /home/chad/goddess_daq /home/chad/goddess_daq/toolbox/source /home/chad/goddess_daq/toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chad/goddess_daq_plus && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chad/goddess_daq_plus /home/chad/goddess_daq_plus/toolbox/source /home/chad/goddess_daq_plus /home/chad/goddess_daq_plus/toolbox/source /home/chad/goddess_daq_plus/toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : toolbox/source/CMakeFiles/GoddessAnalysis_OBJECT.dir/depend
 

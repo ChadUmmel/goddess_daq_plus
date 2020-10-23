@@ -1,8 +1,8 @@
-# Install script for directory: /home/chad/goddess_daq/scripts
+# Install script for directory: /home/chad/goddess_daq_plus/scripts
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/chad/goddess_daq/exec")
+  set(CMAKE_INSTALL_PREFIX "/home/chad/goddess_daq_plus/exec")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,35 +39,35 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/chad/goddess_daq/exec/gebmerge.sh;/home/chad/goddess_daq/exec/gebsort.sh;/home/chad/goddess_daq/exec/gebsort_old.sh;/home/chad/goddess_daq/exec/copyRun.sh")
+   "/home/chad/goddess_daq_plus/exec/gebmerge.sh;/home/chad/goddess_daq_plus/exec/gebsort.sh;/home/chad/goddess_daq_plus/exec/gebsort_old.sh;/home/chad/goddess_daq_plus/exec/copyRun.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/chad/goddess_daq/exec" TYPE PROGRAM FILES
-    "/home/chad/goddess_daq/scripts/gebmerge.sh"
-    "/home/chad/goddess_daq/scripts/gebsort.sh"
-    "/home/chad/goddess_daq/scripts/gebsort_old.sh"
-    "/home/chad/goddess_daq/scripts/copyRun.sh"
+file(INSTALL DESTINATION "/home/chad/goddess_daq_plus/exec" TYPE PROGRAM FILES
+    "/home/chad/goddess_daq_plus/scripts/gebmerge.sh"
+    "/home/chad/goddess_daq_plus/scripts/gebsort.sh"
+    "/home/chad/goddess_daq_plus/scripts/gebsort_old.sh"
+    "/home/chad/goddess_daq_plus/scripts/copyRun.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/chad/goddess_daq/exec/PrintPlots.C;/home/chad/goddess_daq/exec/calibstrips.cxx;/home/chad/goddess_daq/exec/MakeEventLists.cxx;/home/chad/goddess_daq/exec/goddess_analysis_macro.cxx")
+   "/home/chad/goddess_daq_plus/exec/PrintPlots.C;/home/chad/goddess_daq_plus/exec/calibstrips.cxx;/home/chad/goddess_daq_plus/exec/MakeEventLists.cxx;/home/chad/goddess_daq_plus/exec/goddess_analysis_macro.cxx")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/chad/goddess_daq/exec" TYPE FILE FILES
-    "/home/chad/goddess_daq/scripts/PrintPlots.C"
-    "/home/chad/goddess_daq/scripts/calibstrips.cxx"
-    "/home/chad/goddess_daq/scripts/MakeEventLists.cxx"
-    "/home/chad/goddess_daq/scripts/goddess_analysis_macro.cxx"
+file(INSTALL DESTINATION "/home/chad/goddess_daq_plus/exec" TYPE FILE FILES
+    "/home/chad/goddess_daq_plus/scripts/PrintPlots.C"
+    "/home/chad/goddess_daq_plus/scripts/calibstrips.cxx"
+    "/home/chad/goddess_daq_plus/scripts/MakeEventLists.cxx"
+    "/home/chad/goddess_daq_plus/scripts/goddess_analysis_macro.cxx"
     )
 endif()
 

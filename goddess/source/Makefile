@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chad/goddess_daq
+CMAKE_SOURCE_DIR = /home/chad/goddess_daq_plus
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chad/goddess_daq
+CMAKE_BINARY_DIR = /home/chad/goddess_daq_plus
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/chad/goddess_daq && $(CMAKE_COMMAND) -E cmake_progress_start /home/chad/goddess_daq/CMakeFiles /home/chad/goddess_daq/goddess/source/CMakeFiles/progress.marks
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chad/goddess_daq/CMakeFiles 0
+	cd /home/chad/goddess_daq_plus && $(CMAKE_COMMAND) -E cmake_progress_start /home/chad/goddess_daq_plus/CMakeFiles /home/chad/goddess_daq_plus/goddess/source/CMakeFiles/progress.marks
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chad/goddess_daq_plus/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/clean
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/preinstall
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/preinstall
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/chad/goddess_daq && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/chad/goddess_daq_plus && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 goddess/source/CMakeFiles/GoddessStruct.dir/rule:
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/CMakeFiles/GoddessStruct.dir/rule
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/CMakeFiles/GoddessStruct.dir/rule
 .PHONY : goddess/source/CMakeFiles/GoddessStruct.dir/rule
 
 # Convenience name for target.
@@ -168,12 +168,12 @@ GoddessStruct: goddess/source/CMakeFiles/GoddessStruct.dir/rule
 
 # fast build rule for target.
 GoddessStruct/fast:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct.dir/build.make goddess/source/CMakeFiles/GoddessStruct.dir/build
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct.dir/build.make goddess/source/CMakeFiles/GoddessStruct.dir/build
 .PHONY : GoddessStruct/fast
 
 # Convenience name for target.
 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/rule:
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/rule
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/rule
 .PHONY : goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/rule
 
 # Convenience name for target.
@@ -183,12 +183,12 @@ GoddessStruct_OBJECT: goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/rule
 
 # fast build rule for target.
 GoddessStruct_OBJECT/fast:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build
 .PHONY : GoddessStruct_OBJECT/fast
 
 # Convenience name for target.
 goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/rule:
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/rule
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/rule
 .PHONY : goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/rule
 
 # Convenience name for target.
@@ -198,12 +198,12 @@ ORRUBA_OBJECT: goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/rule
 
 # fast build rule for target.
 ORRUBA_OBJECT/fast:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build
 .PHONY : ORRUBA_OBJECT/fast
 
 # Convenience name for target.
 goddess/source/CMakeFiles/ORRUBA.dir/rule:
-	cd /home/chad/goddess_daq && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/CMakeFiles/ORRUBA.dir/rule
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f CMakeFiles/Makefile2 goddess/source/CMakeFiles/ORRUBA.dir/rule
 .PHONY : goddess/source/CMakeFiles/ORRUBA.dir/rule
 
 # Convenience name for target.
@@ -213,7 +213,7 @@ ORRUBA: goddess/source/CMakeFiles/ORRUBA.dir/rule
 
 # fast build rule for target.
 ORRUBA/fast:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA.dir/build.make goddess/source/CMakeFiles/ORRUBA.dir/build
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA.dir/build.make goddess/source/CMakeFiles/ORRUBA.dir/build
 .PHONY : ORRUBA/fast
 
 BB10.o: BB10.cxx.o
@@ -222,7 +222,7 @@ BB10.o: BB10.cxx.o
 
 # target to build an object file
 BB10.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/BB10.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/BB10.cxx.o
 .PHONY : BB10.cxx.o
 
 BB10.i: BB10.cxx.i
@@ -231,7 +231,7 @@ BB10.i: BB10.cxx.i
 
 # target to preprocess a source file
 BB10.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/BB10.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/BB10.cxx.i
 .PHONY : BB10.cxx.i
 
 BB10.s: BB10.cxx.s
@@ -240,7 +240,7 @@ BB10.s: BB10.cxx.s
 
 # target to generate assembly for a file
 BB10.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/BB10.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/BB10.cxx.s
 .PHONY : BB10.cxx.s
 
 Detector.o: Detector.cxx.o
@@ -249,7 +249,7 @@ Detector.o: Detector.cxx.o
 
 # target to build an object file
 Detector.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/Detector.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/Detector.cxx.o
 .PHONY : Detector.cxx.o
 
 Detector.i: Detector.cxx.i
@@ -258,7 +258,7 @@ Detector.i: Detector.cxx.i
 
 # target to preprocess a source file
 Detector.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/Detector.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/Detector.cxx.i
 .PHONY : Detector.cxx.i
 
 Detector.s: Detector.cxx.s
@@ -267,7 +267,7 @@ Detector.s: Detector.cxx.s
 
 # target to generate assembly for a file
 Detector.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/Detector.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/Detector.cxx.s
 .PHONY : Detector.cxx.s
 
 GoddessConfig.o: GoddessConfig.cxx.o
@@ -276,7 +276,7 @@ GoddessConfig.o: GoddessConfig.cxx.o
 
 # target to build an object file
 GoddessConfig.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/GoddessConfig.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/GoddessConfig.cxx.o
 .PHONY : GoddessConfig.cxx.o
 
 GoddessConfig.i: GoddessConfig.cxx.i
@@ -285,7 +285,7 @@ GoddessConfig.i: GoddessConfig.cxx.i
 
 # target to preprocess a source file
 GoddessConfig.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/GoddessConfig.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/GoddessConfig.cxx.i
 .PHONY : GoddessConfig.cxx.i
 
 GoddessConfig.s: GoddessConfig.cxx.s
@@ -294,7 +294,7 @@ GoddessConfig.s: GoddessConfig.cxx.s
 
 # target to generate assembly for a file
 GoddessConfig.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/GoddessConfig.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/GoddessConfig.cxx.s
 .PHONY : GoddessConfig.cxx.s
 
 GoddessStruct.o: GoddessStruct.cxx.o
@@ -303,7 +303,7 @@ GoddessStruct.o: GoddessStruct.cxx.o
 
 # target to build an object file
 GoddessStruct.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o
 .PHONY : GoddessStruct.cxx.o
 
 GoddessStruct.i: GoddessStruct.cxx.i
@@ -312,7 +312,7 @@ GoddessStruct.i: GoddessStruct.cxx.i
 
 # target to preprocess a source file
 GoddessStruct.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.i
 .PHONY : GoddessStruct.cxx.i
 
 GoddessStruct.s: GoddessStruct.cxx.s
@@ -321,7 +321,7 @@ GoddessStruct.s: GoddessStruct.cxx.s
 
 # target to generate assembly for a file
 GoddessStruct.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.s
 .PHONY : GoddessStruct.cxx.s
 
 GoddessStructDictionary.o: GoddessStructDictionary.cxx.o
@@ -330,7 +330,7 @@ GoddessStructDictionary.o: GoddessStructDictionary.cxx.o
 
 # target to build an object file
 GoddessStructDictionary.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.o
 .PHONY : GoddessStructDictionary.cxx.o
 
 GoddessStructDictionary.i: GoddessStructDictionary.cxx.i
@@ -339,7 +339,7 @@ GoddessStructDictionary.i: GoddessStructDictionary.cxx.i
 
 # target to preprocess a source file
 GoddessStructDictionary.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.i
 .PHONY : GoddessStructDictionary.cxx.i
 
 GoddessStructDictionary.s: GoddessStructDictionary.cxx.s
@@ -348,7 +348,7 @@ GoddessStructDictionary.s: GoddessStructDictionary.cxx.s
 
 # target to generate assembly for a file
 GoddessStructDictionary.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/build.make goddess/source/CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.s
 .PHONY : GoddessStructDictionary.cxx.s
 
 IonChamber.o: IonChamber.cxx.o
@@ -357,7 +357,7 @@ IonChamber.o: IonChamber.cxx.o
 
 # target to build an object file
 IonChamber.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/IonChamber.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/IonChamber.cxx.o
 .PHONY : IonChamber.cxx.o
 
 IonChamber.i: IonChamber.cxx.i
@@ -366,7 +366,7 @@ IonChamber.i: IonChamber.cxx.i
 
 # target to preprocess a source file
 IonChamber.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/IonChamber.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/IonChamber.cxx.i
 .PHONY : IonChamber.cxx.i
 
 IonChamber.s: IonChamber.cxx.s
@@ -375,7 +375,7 @@ IonChamber.s: IonChamber.cxx.s
 
 # target to generate assembly for a file
 IonChamber.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/IonChamber.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/IonChamber.cxx.s
 .PHONY : IonChamber.cxx.s
 
 LiquidScint.o: LiquidScint.cxx.o
@@ -384,7 +384,7 @@ LiquidScint.o: LiquidScint.cxx.o
 
 # target to build an object file
 LiquidScint.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/LiquidScint.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/LiquidScint.cxx.o
 .PHONY : LiquidScint.cxx.o
 
 LiquidScint.i: LiquidScint.cxx.i
@@ -393,7 +393,7 @@ LiquidScint.i: LiquidScint.cxx.i
 
 # target to preprocess a source file
 LiquidScint.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/LiquidScint.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/LiquidScint.cxx.i
 .PHONY : LiquidScint.cxx.i
 
 LiquidScint.s: LiquidScint.cxx.s
@@ -402,7 +402,7 @@ LiquidScint.s: LiquidScint.cxx.s
 
 # target to generate assembly for a file
 LiquidScint.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/LiquidScint.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/LiquidScint.cxx.s
 .PHONY : LiquidScint.cxx.s
 
 ORRUBA.o: ORRUBA.cxx.o
@@ -411,7 +411,7 @@ ORRUBA.o: ORRUBA.cxx.o
 
 # target to build an object file
 ORRUBA.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/ORRUBA.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/ORRUBA.cxx.o
 .PHONY : ORRUBA.cxx.o
 
 ORRUBA.i: ORRUBA.cxx.i
@@ -420,7 +420,7 @@ ORRUBA.i: ORRUBA.cxx.i
 
 # target to preprocess a source file
 ORRUBA.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/ORRUBA.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/ORRUBA.cxx.i
 .PHONY : ORRUBA.cxx.i
 
 ORRUBA.s: ORRUBA.cxx.s
@@ -429,7 +429,7 @@ ORRUBA.s: ORRUBA.cxx.s
 
 # target to generate assembly for a file
 ORRUBA.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/ORRUBA.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/ORRUBA.cxx.s
 .PHONY : ORRUBA.cxx.s
 
 ORRUBADictionary.o: ORRUBADictionary.cxx.o
@@ -438,7 +438,7 @@ ORRUBADictionary.o: ORRUBADictionary.cxx.o
 
 # target to build an object file
 ORRUBADictionary.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/ORRUBADictionary.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/ORRUBADictionary.cxx.o
 .PHONY : ORRUBADictionary.cxx.o
 
 ORRUBADictionary.i: ORRUBADictionary.cxx.i
@@ -447,7 +447,7 @@ ORRUBADictionary.i: ORRUBADictionary.cxx.i
 
 # target to preprocess a source file
 ORRUBADictionary.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/ORRUBADictionary.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/ORRUBADictionary.cxx.i
 .PHONY : ORRUBADictionary.cxx.i
 
 ORRUBADictionary.s: ORRUBADictionary.cxx.s
@@ -456,7 +456,7 @@ ORRUBADictionary.s: ORRUBADictionary.cxx.s
 
 # target to generate assembly for a file
 ORRUBADictionary.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/ORRUBADictionary.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/ORRUBADictionary.cxx.s
 .PHONY : ORRUBADictionary.cxx.s
 
 QQQ5.o: QQQ5.cxx.o
@@ -465,7 +465,7 @@ QQQ5.o: QQQ5.cxx.o
 
 # target to build an object file
 QQQ5.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/QQQ5.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/QQQ5.cxx.o
 .PHONY : QQQ5.cxx.o
 
 QQQ5.i: QQQ5.cxx.i
@@ -474,7 +474,7 @@ QQQ5.i: QQQ5.cxx.i
 
 # target to preprocess a source file
 QQQ5.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/QQQ5.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/QQQ5.cxx.i
 .PHONY : QQQ5.cxx.i
 
 QQQ5.s: QQQ5.cxx.s
@@ -483,7 +483,7 @@ QQQ5.s: QQQ5.cxx.s
 
 # target to generate assembly for a file
 QQQ5.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/QQQ5.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/QQQ5.cxx.s
 .PHONY : QQQ5.cxx.s
 
 SolidVector.o: SolidVector.cxx.o
@@ -492,7 +492,7 @@ SolidVector.o: SolidVector.cxx.o
 
 # target to build an object file
 SolidVector.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/SolidVector.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/SolidVector.cxx.o
 .PHONY : SolidVector.cxx.o
 
 SolidVector.i: SolidVector.cxx.i
@@ -501,7 +501,7 @@ SolidVector.i: SolidVector.cxx.i
 
 # target to preprocess a source file
 SolidVector.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/SolidVector.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/SolidVector.cxx.i
 .PHONY : SolidVector.cxx.i
 
 SolidVector.s: SolidVector.cxx.s
@@ -510,7 +510,7 @@ SolidVector.s: SolidVector.cxx.s
 
 # target to generate assembly for a file
 SolidVector.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/SolidVector.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/SolidVector.cxx.s
 .PHONY : SolidVector.cxx.s
 
 TDC.o: TDC.cxx.o
@@ -519,7 +519,7 @@ TDC.o: TDC.cxx.o
 
 # target to build an object file
 TDC.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/TDC.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/TDC.cxx.o
 .PHONY : TDC.cxx.o
 
 TDC.i: TDC.cxx.i
@@ -528,7 +528,7 @@ TDC.i: TDC.cxx.i
 
 # target to preprocess a source file
 TDC.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/TDC.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/TDC.cxx.i
 .PHONY : TDC.cxx.i
 
 TDC.s: TDC.cxx.s
@@ -537,7 +537,7 @@ TDC.s: TDC.cxx.s
 
 # target to generate assembly for a file
 TDC.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/TDC.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/TDC.cxx.s
 .PHONY : TDC.cxx.s
 
 orrubaDet.o: orrubaDet.cxx.o
@@ -546,7 +546,7 @@ orrubaDet.o: orrubaDet.cxx.o
 
 # target to build an object file
 orrubaDet.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/orrubaDet.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/orrubaDet.cxx.o
 .PHONY : orrubaDet.cxx.o
 
 orrubaDet.i: orrubaDet.cxx.i
@@ -555,7 +555,7 @@ orrubaDet.i: orrubaDet.cxx.i
 
 # target to preprocess a source file
 orrubaDet.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/orrubaDet.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/orrubaDet.cxx.i
 .PHONY : orrubaDet.cxx.i
 
 orrubaDet.s: orrubaDet.cxx.s
@@ -564,7 +564,7 @@ orrubaDet.s: orrubaDet.cxx.s
 
 # target to generate assembly for a file
 orrubaDet.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/orrubaDet.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/orrubaDet.cxx.s
 .PHONY : orrubaDet.cxx.s
 
 siDet.o: siDet.cxx.o
@@ -573,7 +573,7 @@ siDet.o: siDet.cxx.o
 
 # target to build an object file
 siDet.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/siDet.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/siDet.cxx.o
 .PHONY : siDet.cxx.o
 
 siDet.i: siDet.cxx.i
@@ -582,7 +582,7 @@ siDet.i: siDet.cxx.i
 
 # target to preprocess a source file
 siDet.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/siDet.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/siDet.cxx.i
 .PHONY : siDet.cxx.i
 
 siDet.s: siDet.cxx.s
@@ -591,7 +591,7 @@ siDet.s: siDet.cxx.s
 
 # target to generate assembly for a file
 siDet.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/siDet.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/siDet.cxx.s
 .PHONY : siDet.cxx.s
 
 superX3.o: superX3.cxx.o
@@ -600,7 +600,7 @@ superX3.o: superX3.cxx.o
 
 # target to build an object file
 superX3.cxx.o:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/superX3.cxx.o
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/superX3.cxx.o
 .PHONY : superX3.cxx.o
 
 superX3.i: superX3.cxx.i
@@ -609,7 +609,7 @@ superX3.i: superX3.cxx.i
 
 # target to preprocess a source file
 superX3.cxx.i:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/superX3.cxx.i
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/superX3.cxx.i
 .PHONY : superX3.cxx.i
 
 superX3.s: superX3.cxx.s
@@ -618,7 +618,7 @@ superX3.s: superX3.cxx.s
 
 # target to generate assembly for a file
 superX3.cxx.s:
-	cd /home/chad/goddess_daq && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/superX3.cxx.s
+	cd /home/chad/goddess_daq_plus && $(MAKE) -f goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/build.make goddess/source/CMakeFiles/ORRUBA_OBJECT.dir/superX3.cxx.s
 .PHONY : superX3.cxx.s
 
 # Help Target
@@ -693,6 +693,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/chad/goddess_daq && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/chad/goddess_daq_plus && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
