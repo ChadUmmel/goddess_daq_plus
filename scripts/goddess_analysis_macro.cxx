@@ -8,6 +8,7 @@ string localPathToGoddessDaq = "";
 
 void LinuxLibrariesLoader ( string myPath )
 {
+
     gSystem->Load ( Form ( "%s/exec/libGoddessToolboxLib.so", myPath.c_str() ) );
     gSystem->Load ( Form ( "%s/exec/libGoddessStruct.so", myPath.c_str() ) );
     gSystem->Load ( Form ( "%s/exec/libORRUBA.so", myPath.c_str() ) );
@@ -46,8 +47,8 @@ void goddess_analysis_macro ( string myPathToGoddessDaq )
     LinuxLibrariesLoader ( myPathToGoddessDaq );
 #endif
 
-    gROOT->ProcessLine ( "GoddessAnalysis::RegisterClassForROOTSession();" );
-    gROOT->ProcessLine ( "GoddessCalib::RegisterClassForROOTSession();" );
+    //gROOT->ProcessLine ( "GoddessAnalysis::RegisterClassForROOTSession();" );
+    //gROOT->ProcessLine ( "GoddessCalib::RegisterClassForROOTSession();" );
 
     gROOT->ProcessLine ( Form ( "pathToGDAQ = \"%s\";", localPathToGoddessDaq.c_str() ) );
 
