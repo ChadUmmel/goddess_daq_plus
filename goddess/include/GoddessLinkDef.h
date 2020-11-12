@@ -16,6 +16,7 @@
 #pragma link C++ class SiDataBase+;
 #pragma link C++ class SiDataDetailed+;
 #pragma link C++ struct IonData+;
+#pragma link C++ struct TDCData+;
 #pragma link C++ struct GSRawData+;
 #pragma link C++ struct GretData+;
 
@@ -28,6 +29,7 @@
 #pragma link C++ class vector<SiDataBase>+;
 #pragma link C++ class vector<SiDataDetailed>+;
 #pragma link C++ class vector<IonData>+;
+#pragma link C++ class vector<TDCData>+;
 #pragma link C++ class vector<GSRawData>+;
 #pragma link C++ class vector<ChValPair>+;
 #pragma link C++ class vector<ORRUBARawData>+;
