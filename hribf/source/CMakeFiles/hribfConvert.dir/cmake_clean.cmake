@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/hribfConvert.dir/ldfConvert.cxx.o"
   "CMakeFiles/hribfConvert.dir/hribfBuffer.cxx.o"
+  "CMakeFiles/hribfConvert.dir/ldfConvert.cxx.o"
   "CMakeFiles/hribfConvert.dir/mainBuffer.cxx.o"
-  "hribfConvert.pdb"
   "hribfConvert"
+  "hribfConvert.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

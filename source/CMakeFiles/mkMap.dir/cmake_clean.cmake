@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/mkMap.dir/mkMap.c.o"
-  "mkMap.pdb"
   "mkMap"
+  "mkMap.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

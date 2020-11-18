@@ -15,6 +15,9 @@
 ########################
 
 //Path to a program.
+CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
+
+//Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Build type, options are: None Debug Release
@@ -78,6 +81,9 @@ CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the compiler during release builds with debug info.
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
+//Path to a program.
+CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
+
 //Flags used by the linker.
 CMAKE_EXE_LINKER_FLAGS:STRING=
 
@@ -130,10 +136,19 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
+CMAKE_PROJECT_DESCRIPTION:STATIC=
+
+//Value Computed by CMake
+CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
+
+//Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=goddess_daq
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
+
+//Path to a program.
+CMAKE_READELF:FILEPATH=/usr/bin/readelf
 
 //Flags used by the linker during the creation of dll's.
 CMAKE_SHARED_LINKER_FLAGS:STRING=
@@ -185,7 +200,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 GCCXML:FILEPATH=GCCXML-NOTFOUND
 
 //Path to a program.
-GENREFLEX_EXECUTABLE:FILEPATH=/home/chad/root-6.14.06/builddir/bin/genreflex
+GENREFLEX_EXECUTABLE:FILEPATH=/home/chad/root-6.22.02/builddir/bin/genreflex
 
 //Dependencies for the target
 GoddessAnalysis_LIB_DEPENDS:STATIC=general;ORRUBA;general;GoddessToolboxLib;general;Spectrum;
@@ -194,64 +209,64 @@ GoddessAnalysis_LIB_DEPENDS:STATIC=general;ORRUBA;general;GoddessToolboxLib;gene
 GoddessStruct_LIB_DEPENDS:STATIC=general;GoddessToolboxLib;
 
 //Dependencies for the target
-GoddessToolboxLib_LIB_DEPENDS:STATIC=general;/home/chad/root-6.14.06/builddir/lib/libCore.so;general;/home/chad/root-6.14.06/builddir/lib/libRIO.so;general;/home/chad/root-6.14.06/builddir/lib/libNet.so;general;/home/chad/root-6.14.06/builddir/lib/libHist.so;general;/home/chad/root-6.14.06/builddir/lib/libGraf.so;general;/home/chad/root-6.14.06/builddir/lib/libGraf3d.so;general;/home/chad/root-6.14.06/builddir/lib/libGpad.so;general;/home/chad/root-6.14.06/builddir/lib/libTree.so;general;/home/chad/root-6.14.06/builddir/lib/libRint.so;general;/home/chad/root-6.14.06/builddir/lib/libPostscript.so;general;/home/chad/root-6.14.06/builddir/lib/libMatrix.so;general;/home/chad/root-6.14.06/builddir/lib/libPhysics.so;general;/home/chad/root-6.14.06/builddir/lib/libMathCore.so;general;/home/chad/root-6.14.06/builddir/lib/libThread.so;general;/home/chad/root-6.14.06/builddir/lib/libGui.so;
+GoddessToolboxLib_LIB_DEPENDS:STATIC=general;/home/chad/root-6.22.02/builddir/lib/libCore.so;general;/home/chad/root-6.22.02/builddir/lib/libRIO.so;general;/home/chad/root-6.22.02/builddir/lib/libNet.so;general;/home/chad/root-6.22.02/builddir/lib/libHist.so;general;/home/chad/root-6.22.02/builddir/lib/libGraf.so;general;/home/chad/root-6.22.02/builddir/lib/libGraf3d.so;general;/home/chad/root-6.22.02/builddir/lib/libGpad.so;general;/home/chad/root-6.22.02/builddir/lib/libTree.so;general;/home/chad/root-6.22.02/builddir/lib/libRint.so;general;/home/chad/root-6.22.02/builddir/lib/libPostscript.so;general;/home/chad/root-6.22.02/builddir/lib/libMatrix.so;general;/home/chad/root-6.22.02/builddir/lib/libPhysics.so;general;/home/chad/root-6.22.02/builddir/lib/libMathCore.so;general;/home/chad/root-6.22.02/builddir/lib/libThread.so;general;/home/chad/root-6.22.02/builddir/lib/libGui.so;
 
 //Dependencies for the target
 ORRUBA_LIB_DEPENDS:STATIC=general;GoddessStruct;
 
 //Path to a program.
-ROOTCINT_EXECUTABLE:FILEPATH=/home/chad/root-6.14.06/builddir/bin/rootcint
+ROOTCINT_EXECUTABLE:FILEPATH=/home/chad/root-6.22.02/builddir/bin/rootcint
 
 //Path to a program.
-ROOT_CONFIG_EXECUTABLE:FILEPATH=/home/chad/root-6.14.06/builddir/bin/root-config
+ROOT_CONFIG_EXECUTABLE:FILEPATH=/home/chad/root-6.22.02/builddir/bin/root-config
 
 //Path to a library.
 ROOT_Cint_LIBRARY:FILEPATH=ROOT_Cint_LIBRARY-NOTFOUND
 
 //Path to a library.
-ROOT_Core_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libCore.so
+ROOT_Core_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libCore.so
 
 //Path to a library.
-ROOT_Gpad_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libGpad.so
+ROOT_Gpad_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libGpad.so
 
 //Path to a library.
-ROOT_Graf3d_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libGraf3d.so
+ROOT_Graf3d_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libGraf3d.so
 
 //Path to a library.
-ROOT_Graf_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libGraf.so
+ROOT_Graf_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libGraf.so
 
 //Path to a library.
-ROOT_Gui_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libGui.so
+ROOT_Gui_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libGui.so
 
 //Path to a library.
-ROOT_Hist_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libHist.so
+ROOT_Hist_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libHist.so
 
 //Path to a library.
-ROOT_MathCore_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libMathCore.so
+ROOT_MathCore_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libMathCore.so
 
 //Path to a library.
-ROOT_Matrix_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libMatrix.so
+ROOT_Matrix_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libMatrix.so
 
 //Path to a library.
-ROOT_Net_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libNet.so
+ROOT_Net_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libNet.so
 
 //Path to a library.
-ROOT_Physics_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libPhysics.so
+ROOT_Physics_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libPhysics.so
 
 //Path to a library.
-ROOT_Postscript_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libPostscript.so
+ROOT_Postscript_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libPostscript.so
 
 //Path to a library.
-ROOT_RIO_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libRIO.so
+ROOT_RIO_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libRIO.so
 
 //Path to a library.
-ROOT_Rint_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libRint.so
+ROOT_Rint_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libRint.so
 
 //Path to a library.
-ROOT_Thread_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libThread.so
+ROOT_Thread_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libThread.so
 
 //Path to a library.
-ROOT_Tree_LIBRARY:FILEPATH=/home/chad/root-6.14.06/builddir/lib/libTree.so
+ROOT_Tree_LIBRARY:FILEPATH=/home/chad/root-6.22.02/builddir/lib/libTree.so
 
 //Path to a file.
 ZLIB_INCLUDE_DIR:PATH=/usr/include
@@ -279,6 +294,8 @@ hribfConvert_SOURCE_DIR:STATIC=/home/chad/goddess_daq_plus/hribf
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: CMAKE_ADDR2LINE
+CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -286,9 +303,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/chad/goddess_daq_plus
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=10
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=16
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -329,6 +346,8 @@ CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_DLLTOOL
+CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Executable file format
 CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
@@ -347,6 +366,8 @@ CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Unix Makefiles
+//Generator instance identifier.
+CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
@@ -382,8 +403,10 @@ CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_READELF
+CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.10
+CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.16
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -415,7 +438,7 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding ROOT
-FIND_PACKAGE_MESSAGE_DETAILS_ROOT:INTERNAL=[/home/chad/root-6.14.06/builddir/bin/root-config][/home/chad/root-6.14.06/builddir][6.14/06][/home/chad/root-6.14.06/builddir/include][/home/chad/root-6.14.06/builddir/lib/libCore.so;/home/chad/root-6.14.06/builddir/lib/libRIO.so;/home/chad/root-6.14.06/builddir/lib/libNet.so;/home/chad/root-6.14.06/builddir/lib/libHist.so;/home/chad/root-6.14.06/builddir/lib/libGraf.so;/home/chad/root-6.14.06/builddir/lib/libGraf3d.so;/home/chad/root-6.14.06/builddir/lib/libGpad.so;/home/chad/root-6.14.06/builddir/lib/libTree.so;/home/chad/root-6.14.06/builddir/lib/libRint.so;/home/chad/root-6.14.06/builddir/lib/libPostscript.so;/home/chad/root-6.14.06/builddir/lib/libMatrix.so;/home/chad/root-6.14.06/builddir/lib/libPhysics.so;/home/chad/root-6.14.06/builddir/lib/libMathCore.so;/home/chad/root-6.14.06/builddir/lib/libThread.so;/home/chad/root-6.14.06/builddir/lib/libGui.so][/home/chad/root-6.14.06/builddir/lib][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_ROOT:INTERNAL=[/home/chad/root-6.22.02/builddir/bin/root-config][/home/chad/root-6.22.02/builddir][6.22/02][/home/chad/root-6.22.02/builddir/include][/home/chad/root-6.22.02/builddir/lib/libCore.so;/home/chad/root-6.22.02/builddir/lib/libRIO.so;/home/chad/root-6.22.02/builddir/lib/libNet.so;/home/chad/root-6.22.02/builddir/lib/libHist.so;/home/chad/root-6.22.02/builddir/lib/libGraf.so;/home/chad/root-6.22.02/builddir/lib/libGraf3d.so;/home/chad/root-6.22.02/builddir/lib/libGpad.so;/home/chad/root-6.22.02/builddir/lib/libTree.so;/home/chad/root-6.22.02/builddir/lib/libRint.so;/home/chad/root-6.22.02/builddir/lib/libPostscript.so;/home/chad/root-6.22.02/builddir/lib/libMatrix.so;/home/chad/root-6.22.02/builddir/lib/libPhysics.so;/home/chad/root-6.22.02/builddir/lib/libMathCore.so;/home/chad/root-6.22.02/builddir/lib/libThread.so;/home/chad/root-6.22.02/builddir/lib/libGui.so][/home/chad/root-6.22.02/builddir/lib][v()]
 //Details about finding ZLIB
 FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/usr/lib/x86_64-linux-gnu/libz.so][/usr/include][v1.2.11()]
 //ADVANCED property for variable: GCCXML

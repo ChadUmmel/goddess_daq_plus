@@ -30,15 +30,15 @@ deque
 mainBuffer.h
 /home/chad/goddess_daq_plus/hribf/source/mainBuffer.h
 
-/home/chad/root-6.14.06/builddir/include/DllImport.h
+/home/chad/root-6.22.02/builddir/include/DllImport.h
 
-/home/chad/root-6.14.06/builddir/include/RConfigure.h
+/home/chad/root-6.22.02/builddir/include/RConfigure.h
 
-/home/chad/root-6.14.06/builddir/include/ROOT/RConfig.h
+/home/chad/root-6.22.02/builddir/include/ROOT/RConfig.hxx
 ../RVersion.h
-/home/chad/root-6.14.06/builddir/include/RVersion.h
+/home/chad/root-6.22.02/builddir/include/RVersion.h
 RConfigure.h
-/home/chad/root-6.14.06/builddir/include/ROOT/RConfigure.h
+/home/chad/root-6.22.02/builddir/include/ROOT/RConfigure.h
 stdlib.h
 -
 features.h
@@ -48,17 +48,17 @@ AvailabilityMacros.h
 TargetConditionals.h
 -
 
-/home/chad/root-6.14.06/builddir/include/RVersion.h
+/home/chad/root-6.22.02/builddir/include/RVersion.h
 
-/home/chad/root-6.14.06/builddir/include/Rtypes.h
+/home/chad/root-6.22.02/builddir/include/Rtypes.h
 RtypesCore.h
-/home/chad/root-6.14.06/builddir/include/RtypesCore.h
+/home/chad/root-6.22.02/builddir/include/RtypesCore.h
 DllImport.h
-/home/chad/root-6.14.06/builddir/include/DllImport.h
+/home/chad/root-6.22.02/builddir/include/DllImport.h
 snprintf.h
-/home/chad/root-6.14.06/builddir/include/snprintf.h
+/home/chad/root-6.22.02/builddir/include/snprintf.h
 strlcpy.h
-/home/chad/root-6.14.06/builddir/include/strlcpy.h
+/home/chad/root-6.22.02/builddir/include/strlcpy.h
 atomic
 -
 stdio.h
@@ -67,53 +67,57 @@ string.h
 -
 typeinfo
 -
-TGenericClassInfo.h
-/home/chad/root-6.14.06/builddir/include/TGenericClassInfo.h
-TIsAProxy.h
-/home/chad/root-6.14.06/builddir/include/TIsAProxy.h
-
-/home/chad/root-6.14.06/builddir/include/RtypesCore.h
-ROOT/RConfig.h
+type_traits
 -
+TGenericClassInfo.h
+/home/chad/root-6.22.02/builddir/include/TGenericClassInfo.h
+TIsAProxy.h
+/home/chad/root-6.22.02/builddir/include/TIsAProxy.h
+
+/home/chad/root-6.22.02/builddir/include/RtypesCore.h
+ROOT/RConfig.hxx
+-
+DllImport.h
+/home/chad/root-6.22.02/builddir/include/DllImport.h
 stddef.h
 -
 
-/home/chad/root-6.14.06/builddir/include/TGenericClassInfo.h
+/home/chad/root-6.22.02/builddir/include/TGenericClassInfo.h
+Rtypes.h
+/home/chad/root-6.22.02/builddir/include/Rtypes.h
 vector
 -
 TSchemaHelper.h
-/home/chad/root-6.14.06/builddir/include/TSchemaHelper.h
-Rtypes.h
-/home/chad/root-6.14.06/builddir/include/Rtypes.h
+/home/chad/root-6.22.02/builddir/include/TSchemaHelper.h
 
-/home/chad/root-6.14.06/builddir/include/TIsAProxy.h
+/home/chad/root-6.22.02/builddir/include/TIsAProxy.h
 TVirtualIsAProxy.h
-/home/chad/root-6.14.06/builddir/include/TVirtualIsAProxy.h
+/home/chad/root-6.22.02/builddir/include/TVirtualIsAProxy.h
 RtypesCore.h
-/home/chad/root-6.14.06/builddir/include/RtypesCore.h
+/home/chad/root-6.22.02/builddir/include/RtypesCore.h
 atomic
 -
 typeinfo
 -
 
-/home/chad/root-6.14.06/builddir/include/TSchemaHelper.h
+/home/chad/root-6.22.02/builddir/include/TSchemaHelper.h
 RtypesCore.h
-/home/chad/root-6.14.06/builddir/include/RtypesCore.h
+/home/chad/root-6.22.02/builddir/include/RtypesCore.h
 string
 -
 
-/home/chad/root-6.14.06/builddir/include/TVirtualIsAProxy.h
+/home/chad/root-6.22.02/builddir/include/TVirtualIsAProxy.h
 
-/home/chad/root-6.14.06/builddir/include/snprintf.h
-ROOT/RConfig.h
+/home/chad/root-6.22.02/builddir/include/snprintf.h
+ROOT/RConfig.hxx
 -
 stdio.h
 -
 stdarg.h
 -
 
-/home/chad/root-6.14.06/builddir/include/strlcpy.h
-ROOT/RConfig.h
+/home/chad/root-6.22.02/builddir/include/strlcpy.h
+ROOT/RConfig.hxx
 -
 unistd.h
 -

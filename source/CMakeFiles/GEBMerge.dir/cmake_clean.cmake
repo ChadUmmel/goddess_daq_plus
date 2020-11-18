@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GEBMerge.dir/GEBMerge.cxx.o"
   "CMakeFiles/GEBMerge.dir/MergeManager.cxx.o"
-  "GEBMerge.pdb"
   "GEBMerge"
+  "GEBMerge.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

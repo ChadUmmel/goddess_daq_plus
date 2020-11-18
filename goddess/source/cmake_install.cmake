@@ -72,12 +72,15 @@ file(INSTALL DESTINATION "/home/chad/goddess_daq_plus/exec" TYPE SHARED_LIBRARY 
      NOT IS_SYMLINK "$ENV{DESTDIR}/home/chad/goddess_daq_plus/exec/libORRUBA.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}/home/chad/goddess_daq_plus/exec/libORRUBA.so"
-         OLD_RPATH "/home/chad/root-6.14.06/builddir/lib:/home/chad/goddess_daq_plus/goddess/source:/home/chad/goddess_daq_plus/toolbox/source:"
+         OLD_RPATH "/home/chad/root-6.22.02/builddir/lib:/home/chad/goddess_daq_plus/goddess/source:/home/chad/goddess_daq_plus/toolbox/source:"
          NEW_RPATH "/home/chad/goddess_daq_plus/exec")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/chad/goddess_daq_plus/exec/libORRUBA.so")
     endif()
   endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -100,11 +103,14 @@ file(INSTALL DESTINATION "/home/chad/goddess_daq_plus/exec" TYPE SHARED_LIBRARY 
      NOT IS_SYMLINK "$ENV{DESTDIR}/home/chad/goddess_daq_plus/exec/libGoddessStruct.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}/home/chad/goddess_daq_plus/exec/libGoddessStruct.so"
-         OLD_RPATH "/home/chad/root-6.14.06/builddir/lib:/home/chad/goddess_daq_plus/toolbox/source:"
+         OLD_RPATH "/home/chad/root-6.22.02/builddir/lib:/home/chad/goddess_daq_plus/toolbox/source:"
          NEW_RPATH "/home/chad/goddess_daq_plus/exec")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/chad/goddess_daq_plus/exec/libGoddessStruct.so")
     endif()
   endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 

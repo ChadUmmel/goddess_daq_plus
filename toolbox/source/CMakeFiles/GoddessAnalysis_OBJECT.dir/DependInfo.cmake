@@ -14,7 +14,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/chad/root-6.14.06/builddir/include"
+  "/home/chad/root-6.22.02/builddir/include"
   "include"
   "toolbox/include"
   "goddess/include"

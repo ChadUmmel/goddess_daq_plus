@@ -1,6 +1,7 @@
 // Do NOT change. Changes will be lost next time file is generated
 
 #define R__DICTIONARY_FILENAME GoddessAnalysisDictionnary
+#define R__NO_DEPRECATION
 
 /*******************************************************************/
 #include <stddef.h>
@@ -33,7 +34,7 @@
 
 #include "TDataMember.h"
 
-// Since CINT ignores the std namespace, we need to do so in this file.
+// The generated code does not explicitly qualifies STL entities
 namespace std {} using namespace std;
 
 // Header files passed as explicit arguments
@@ -347,7 +348,7 @@ namespace ROOT {
       vector<int> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<int>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<int>", -2, "vector", 216,
+         instance("vector<int>", -2, "vector", 386,
                   typeid(vector<int>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEintgR_Dictionary, isa_proxy, 0,
                   sizeof(vector<int>) );
@@ -357,6 +358,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEintgR);
       instance.SetDestructor(&destruct_vectorlEintgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<int> >()));
+
+      ::ROOT::AddClassAlternate("vector<int>","std::vector<int, std::allocator<int> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -410,7 +413,7 @@ namespace ROOT {
       vector<float> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<float>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<float>", -2, "vector", 216,
+         instance("vector<float>", -2, "vector", 386,
                   typeid(vector<float>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEfloatgR_Dictionary, isa_proxy, 0,
                   sizeof(vector<float>) );
@@ -420,6 +423,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEfloatgR);
       instance.SetDestructor(&destruct_vectorlEfloatgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<float> >()));
+
+      ::ROOT::AddClassAlternate("vector<float>","std::vector<float, std::allocator<float> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -473,7 +478,7 @@ namespace ROOT {
       vector<double> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<double>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<double>", -2, "vector", 216,
+         instance("vector<double>", -2, "vector", 386,
                   typeid(vector<double>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEdoublegR_Dictionary, isa_proxy, 0,
                   sizeof(vector<double>) );
@@ -483,6 +488,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEdoublegR);
       instance.SetDestructor(&destruct_vectorlEdoublegR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<double> >()));
+
+      ::ROOT::AddClassAlternate("vector<double>","std::vector<double, std::allocator<double> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -536,7 +543,7 @@ namespace ROOT {
       vector<TVector3> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<TVector3>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<TVector3>", -2, "vector", 216,
+         instance("vector<TVector3>", -2, "vector", 386,
                   typeid(vector<TVector3>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlETVector3gR_Dictionary, isa_proxy, 0,
                   sizeof(vector<TVector3>) );
@@ -546,6 +553,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlETVector3gR);
       instance.SetDestructor(&destruct_vectorlETVector3gR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<TVector3> >()));
+
+      ::ROOT::AddClassAlternate("vector<TVector3>","std::vector<TVector3, std::allocator<TVector3> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -599,7 +608,7 @@ namespace ROOT {
       vector<TTree*> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<TTree*>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<TTree*>", -2, "vector", 216,
+         instance("vector<TTree*>", -2, "vector", 386,
                   typeid(vector<TTree*>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlETTreemUgR_Dictionary, isa_proxy, 0,
                   sizeof(vector<TTree*>) );
@@ -609,6 +618,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlETTreemUgR);
       instance.SetDestructor(&destruct_vectorlETTreemUgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<TTree*> >()));
+
+      ::ROOT::AddClassAlternate("vector<TTree*>","std::vector<TTree*, std::allocator<TTree*> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -662,7 +673,7 @@ namespace ROOT {
       map<unsigned short,vector<double> > *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(map<unsigned short,vector<double> >));
       static ::ROOT::TGenericClassInfo 
-         instance("map<unsigned short,vector<double> >", -2, "map", 99,
+         instance("map<unsigned short,vector<double> >", -2, "map", 100,
                   typeid(map<unsigned short,vector<double> >), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &maplEunsignedsPshortcOvectorlEdoublegRsPgR_Dictionary, isa_proxy, 0,
                   sizeof(map<unsigned short,vector<double> >) );
@@ -672,6 +683,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_maplEunsignedsPshortcOvectorlEdoublegRsPgR);
       instance.SetDestructor(&destruct_maplEunsignedsPshortcOvectorlEdoublegRsPgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::MapInsert< map<unsigned short,vector<double> > >()));
+
+      ::ROOT::AddClassAlternate("map<unsigned short,vector<double> >","std::map<unsigned short, std::vector<double, std::allocator<double> >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::vector<double, std::allocator<double> > > > >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -725,7 +738,7 @@ namespace ROOT {
       map<string,vector<double> > *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(map<string,vector<double> >));
       static ::ROOT::TGenericClassInfo 
-         instance("map<string,vector<double> >", -2, "map", 99,
+         instance("map<string,vector<double> >", -2, "map", 100,
                   typeid(map<string,vector<double> >), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &maplEstringcOvectorlEdoublegRsPgR_Dictionary, isa_proxy, 0,
                   sizeof(map<string,vector<double> >) );
@@ -735,6 +748,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_maplEstringcOvectorlEdoublegRsPgR);
       instance.SetDestructor(&destruct_maplEstringcOvectorlEdoublegRsPgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::MapInsert< map<string,vector<double> > >()));
+
+      ::ROOT::AddClassAlternate("map<string,vector<double> >","std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<double, std::allocator<double> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<double, std::allocator<double> > > > >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -788,7 +803,7 @@ namespace ROOT {
       map<string,map<unsigned short,vector<double> > > *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(map<string,map<unsigned short,vector<double> > >));
       static ::ROOT::TGenericClassInfo 
-         instance("map<string,map<unsigned short,vector<double> > >", -2, "map", 99,
+         instance("map<string,map<unsigned short,vector<double> > >", -2, "map", 100,
                   typeid(map<string,map<unsigned short,vector<double> > >), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &maplEstringcOmaplEunsignedsPshortcOvectorlEdoublegRsPgRsPgR_Dictionary, isa_proxy, 0,
                   sizeof(map<string,map<unsigned short,vector<double> > >) );
@@ -798,6 +813,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_maplEstringcOmaplEunsignedsPshortcOvectorlEdoublegRsPgRsPgR);
       instance.SetDestructor(&destruct_maplEstringcOmaplEunsignedsPshortcOvectorlEdoublegRsPgRsPgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::MapInsert< map<string,map<unsigned short,vector<double> > > >()));
+
+      ::ROOT::AddClassAlternate("map<string,map<unsigned short,vector<double> > >","std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::map<unsigned short, std::vector<double, std::allocator<double> >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::vector<double, std::allocator<double> > > > >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::map<unsigned short, std::vector<double, std::allocator<double> >, std::less<unsigned short>, std::allocator<std::pair<unsigned short const, std::vector<double, std::allocator<double> > > > > > > >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -851,7 +868,7 @@ namespace ROOT {
       map<string,TH2F*> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(map<string,TH2F*>));
       static ::ROOT::TGenericClassInfo 
-         instance("map<string,TH2F*>", -2, "map", 99,
+         instance("map<string,TH2F*>", -2, "map", 100,
                   typeid(map<string,TH2F*>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &maplEstringcOTH2FmUgR_Dictionary, isa_proxy, 0,
                   sizeof(map<string,TH2F*>) );
@@ -861,6 +878,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_maplEstringcOTH2FmUgR);
       instance.SetDestructor(&destruct_maplEstringcOTH2FmUgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::MapInsert< map<string,TH2F*> >()));
+
+      ::ROOT::AddClassAlternate("map<string,TH2F*>","std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, TH2F*, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, TH2F*> > >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -914,7 +933,7 @@ namespace ROOT {
       map<string,TGraph*> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(map<string,TGraph*>));
       static ::ROOT::TGenericClassInfo 
-         instance("map<string,TGraph*>", -2, "map", 99,
+         instance("map<string,TGraph*>", -2, "map", 100,
                   typeid(map<string,TGraph*>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &maplEstringcOTGraphmUgR_Dictionary, isa_proxy, 0,
                   sizeof(map<string,TGraph*>) );
@@ -924,6 +943,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_maplEstringcOTGraphmUgR);
       instance.SetDestructor(&destruct_maplEstringcOTGraphmUgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::MapInsert< map<string,TGraph*> >()));
+
+      ::ROOT::AddClassAlternate("map<string,TGraph*>","std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, TGraph*, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, TGraph*> > >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -971,12 +992,12 @@ namespace {
 0
     };
     static const char* includePaths[] = {
-"/home/chad/root-6.14.06/builddir/include",
+"/home/chad/root-6.22.02/builddir/include",
 "/home/chad/goddess_daq_plus/include",
 "/home/chad/goddess_daq_plus/toolbox/include",
 "/home/chad/goddess_daq_plus/goddess/include",
 "/home/chad/goddess_daq_plus/scripts/include",
-"/home/chad/root-6.14.06/builddir/include",
+"/home/chad/root-6.22.02/builddir/include/",
 "/home/chad/goddess_daq_plus/toolbox/source/",
 0
     };
@@ -985,7 +1006,7 @@ namespace {
 #pragma clang diagnostic ignored "-Wkeyword-compat"
 #pragma clang diagnostic ignored "-Wignored-attributes"
 #pragma clang diagnostic ignored "-Wreturn-type-c-linkage"
-extern int __Cling_Autoloading_Map;
+extern int __Cling_AutoLoading_Map;
 class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/toolbox/include/GoddessAnalysis.h")))  GoddessAnalysis;
 class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/toolbox/include/GoddessCalib.h")))  GoddessCalib;
 class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/toolbox/include/GoddessGeomUtils.h")))  GoddessGeomUtils;
@@ -993,28 +1014,26 @@ class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/toolbo
     static const char* payloadCode = R"DICTPAYLOAD(
 #line 1 "GoddessAnalysisDictionnary dictionary payload"
 
-#ifndef G__VECTOR_HAS_CLASS_ITERATOR
-  #define G__VECTOR_HAS_CLASS_ITERATOR 1
-#endif
 
 #define _BACKWARD_BACKWARD_WARNING_H
+// Inline headers
 #include "/home/chad/goddess_daq_plus/toolbox/include/GoddessAnalysis.h"
 #include "/home/chad/goddess_daq_plus/toolbox/include/GoddessCalib.h"
 #include "/home/chad/goddess_daq_plus/toolbox/include/GoddessGeomUtils.h"
 
 #undef  _BACKWARD_BACKWARD_WARNING_H
 )DICTPAYLOAD";
-    static const char* classesHeaders[]={
+    static const char* classesHeaders[] = {
 "GoddessAnalysis", payloadCode, "@",
 "GoddessCalib", payloadCode, "@",
 "GoddessGeomUtils", payloadCode, "@",
-nullptr};
-
+nullptr
+};
     static bool isInitialized = false;
     if (!isInitialized) {
       TROOT::RegisterModule("GoddessAnalysisDictionnary",
         headers, includePaths, payloadCode, fwdDeclCode,
-        TriggerDictionaryInitialization_GoddessAnalysisDictionnary_Impl, {}, classesHeaders, /*has no C++ module*/false);
+        TriggerDictionaryInitialization_GoddessAnalysisDictionnary_Impl, {}, classesHeaders, /*hasCxxModule*/false);
       isInitialized = true;
     }
   }

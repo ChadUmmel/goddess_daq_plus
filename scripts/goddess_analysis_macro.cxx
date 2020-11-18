@@ -38,6 +38,7 @@ void LoadMakeEventLists()
 void goddess_analysis_macro ( string myPathToGoddessDaq )
 {
     localPathToGoddessDaq = myPathToGoddessDaq;
+    std::cout<<localPathToGoddessDaq<<std::endl;
 
 #if __APPLE__
     MacLibrariesLoader ( myPathToGoddessDaq );
@@ -47,8 +48,8 @@ void goddess_analysis_macro ( string myPathToGoddessDaq )
     LinuxLibrariesLoader ( myPathToGoddessDaq );
 #endif
 
-    //gROOT->ProcessLine ( "GoddessAnalysis::RegisterClassForROOTSession();" );
-    //gROOT->ProcessLine ( "GoddessCalib::RegisterClassForROOTSession();" );
+    gROOT->ProcessLine ( "GoddessAnalysis::RegisterClassForROOTSession();" );
+    gROOT->ProcessLine ( "GoddessCalib::RegisterClassForROOTSession();" );
 
     gROOT->ProcessLine ( Form ( "pathToGDAQ = \"%s\";", localPathToGoddessDaq.c_str() ) );
 

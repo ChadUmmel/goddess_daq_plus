@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "GoddessStructDictionary.cxx"
   "CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStruct.cxx.o"
   "CMakeFiles/GoddessStruct_OBJECT.dir/GoddessStructDictionary.cxx.o"
+  "GoddessStructDictionary.cxx"
 )
 
 # Per-language clean rules from dependency scanning.

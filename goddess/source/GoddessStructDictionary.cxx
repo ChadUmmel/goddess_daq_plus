@@ -1,6 +1,7 @@
 // Do NOT change. Changes will be lost next time file is generated
 
 #define R__DICTIONARY_FILENAME GoddessStructDictionary
+#define R__NO_DEPRECATION
 
 /*******************************************************************/
 #include <stddef.h>
@@ -33,7 +34,7 @@
 
 #include "TDataMember.h"
 
-// Since CINT ignores the std namespace, we need to do so in this file.
+// The generated code does not explicitly qualifies STL entities
 namespace std {} using namespace std;
 
 // Header files passed as explicit arguments
@@ -347,6 +348,8 @@ namespace ROOT {
       instance.SetDestructor(&destruct_PNPairlEULong64_tgR);
 
       ::ROOT::AddClassAlternate("PNPair<ULong64_t>","PNPair<ULong64_t int>");
+
+      ::ROOT::AddClassAlternate("PNPair<ULong64_t>","PNPair<unsigned long long>");
       return &instance;
    }
    TGenericClassInfo *GenerateInitInstance(const ::PNPair<ULong64_t>*)
@@ -473,6 +476,51 @@ namespace ROOT {
    }
 
    static void IonData_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   static TClass *TDCData_Dictionary();
+   static void TDCData_TClassManip(TClass*);
+   static void *new_TDCData(void *p = 0);
+   static void *newArray_TDCData(Long_t size, void *p);
+   static void delete_TDCData(void *p);
+   static void deleteArray_TDCData(void *p);
+   static void destruct_TDCData(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const ::TDCData*)
+   {
+      ::TDCData *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(::TDCData));
+      static ::ROOT::TGenericClassInfo 
+         instance("TDCData", "GoddessStruct.h", 381,
+                  typeid(::TDCData), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &TDCData_Dictionary, isa_proxy, 4,
+                  sizeof(::TDCData) );
+      instance.SetNew(&new_TDCData);
+      instance.SetNewArray(&newArray_TDCData);
+      instance.SetDelete(&delete_TDCData);
+      instance.SetDeleteArray(&deleteArray_TDCData);
+      instance.SetDestructor(&destruct_TDCData);
+      return &instance;
+   }
+   TGenericClassInfo *GenerateInitInstance(const ::TDCData*)
+   {
+      return GenerateInitInstanceLocal((::TDCData*)0);
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const ::TDCData*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *TDCData_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const ::TDCData*)0x0)->GetClass();
+      TDCData_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void TDCData_TClassManip(TClass* ){
    }
 
 } // end of namespace ROOT
@@ -1363,6 +1411,27 @@ namespace ROOT {
 
 namespace ROOT {
    // Wrappers around operator new
+   static void *new_TDCData(void *p) {
+      return  p ? new(p) ::TDCData : new ::TDCData;
+   }
+   static void *newArray_TDCData(Long_t nElements, void *p) {
+      return p ? new(p) ::TDCData[nElements] : new ::TDCData[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_TDCData(void *p) {
+      delete ((::TDCData*)p);
+   }
+   static void deleteArray_TDCData(void *p) {
+      delete [] ((::TDCData*)p);
+   }
+   static void destruct_TDCData(void *p) {
+      typedef ::TDCData current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class ::TDCData
+
+namespace ROOT {
+   // Wrappers around operator new
    static void *new_GSRawData(void *p) {
       return  p ? new(p) ::GSRawData : new ::GSRawData;
    }
@@ -1463,7 +1532,7 @@ namespace ROOT {
       vector<int> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<int>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<int>", -2, "vector", 216,
+         instance("vector<int>", -2, "vector", 386,
                   typeid(vector<int>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEintgR_Dictionary, isa_proxy, 0,
                   sizeof(vector<int>) );
@@ -1473,6 +1542,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEintgR);
       instance.SetDestructor(&destruct_vectorlEintgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<int> >()));
+
+      ::ROOT::AddClassAlternate("vector<int>","std::vector<int, std::allocator<int> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -1526,7 +1597,7 @@ namespace ROOT {
       vector<float> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<float>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<float>", -2, "vector", 216,
+         instance("vector<float>", -2, "vector", 386,
                   typeid(vector<float>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEfloatgR_Dictionary, isa_proxy, 0,
                   sizeof(vector<float>) );
@@ -1536,6 +1607,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEfloatgR);
       instance.SetDestructor(&destruct_vectorlEfloatgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<float> >()));
+
+      ::ROOT::AddClassAlternate("vector<float>","std::vector<float, std::allocator<float> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -1589,7 +1662,7 @@ namespace ROOT {
       vector<bool> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<bool>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<bool>", -2, "vector", 543,
+         instance("vector<bool>", -2, "vector", 592,
                   typeid(vector<bool>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEboolgR_Dictionary, isa_proxy, 0,
                   sizeof(vector<bool>) );
@@ -1599,6 +1672,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEboolgR);
       instance.SetDestructor(&destruct_vectorlEboolgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<bool> >()));
+
+      ::ROOT::AddClassAlternate("vector<bool>","std::vector<bool, std::allocator<bool> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -1652,7 +1727,7 @@ namespace ROOT {
       vector<ULong64_t> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<ULong64_t>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<ULong64_t>", -2, "vector", 216,
+         instance("vector<ULong64_t>", -2, "vector", 386,
                   typeid(vector<ULong64_t>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEULong64_tgR_Dictionary, isa_proxy, 0,
                   sizeof(vector<ULong64_t>) );
@@ -1662,6 +1737,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEULong64_tgR);
       instance.SetDestructor(&destruct_vectorlEULong64_tgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<ULong64_t> >()));
+
+      ::ROOT::AddClassAlternate("vector<ULong64_t>","std::vector<unsigned long long, std::allocator<unsigned long long> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -1715,7 +1792,7 @@ namespace ROOT {
       vector<TVector3> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<TVector3>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<TVector3>", -2, "vector", 216,
+         instance("vector<TVector3>", -2, "vector", 386,
                   typeid(vector<TVector3>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlETVector3gR_Dictionary, isa_proxy, 0,
                   sizeof(vector<TVector3>) );
@@ -1725,6 +1802,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlETVector3gR);
       instance.SetDestructor(&destruct_vectorlETVector3gR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<TVector3> >()));
+
+      ::ROOT::AddClassAlternate("vector<TVector3>","std::vector<TVector3, std::allocator<TVector3> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -1764,6 +1843,71 @@ namespace ROOT {
 } // end of namespace ROOT for class vector<TVector3>
 
 namespace ROOT {
+   static TClass *vectorlETDCDatagR_Dictionary();
+   static void vectorlETDCDatagR_TClassManip(TClass*);
+   static void *new_vectorlETDCDatagR(void *p = 0);
+   static void *newArray_vectorlETDCDatagR(Long_t size, void *p);
+   static void delete_vectorlETDCDatagR(void *p);
+   static void deleteArray_vectorlETDCDatagR(void *p);
+   static void destruct_vectorlETDCDatagR(void *p);
+
+   // Function generating the singleton type initializer
+   static TGenericClassInfo *GenerateInitInstanceLocal(const vector<TDCData>*)
+   {
+      vector<TDCData> *ptr = 0;
+      static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<TDCData>));
+      static ::ROOT::TGenericClassInfo 
+         instance("vector<TDCData>", -2, "vector", 386,
+                  typeid(vector<TDCData>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
+                  &vectorlETDCDatagR_Dictionary, isa_proxy, 4,
+                  sizeof(vector<TDCData>) );
+      instance.SetNew(&new_vectorlETDCDatagR);
+      instance.SetNewArray(&newArray_vectorlETDCDatagR);
+      instance.SetDelete(&delete_vectorlETDCDatagR);
+      instance.SetDeleteArray(&deleteArray_vectorlETDCDatagR);
+      instance.SetDestructor(&destruct_vectorlETDCDatagR);
+      instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<TDCData> >()));
+
+      ::ROOT::AddClassAlternate("vector<TDCData>","std::vector<TDCData, std::allocator<TDCData> >");
+      return &instance;
+   }
+   // Static variable to force the class initialization
+   static ::ROOT::TGenericClassInfo *_R__UNIQUE_DICT_(Init) = GenerateInitInstanceLocal((const vector<TDCData>*)0x0); R__UseDummy(_R__UNIQUE_DICT_(Init));
+
+   // Dictionary for non-ClassDef classes
+   static TClass *vectorlETDCDatagR_Dictionary() {
+      TClass* theClass =::ROOT::GenerateInitInstanceLocal((const vector<TDCData>*)0x0)->GetClass();
+      vectorlETDCDatagR_TClassManip(theClass);
+   return theClass;
+   }
+
+   static void vectorlETDCDatagR_TClassManip(TClass* ){
+   }
+
+} // end of namespace ROOT
+
+namespace ROOT {
+   // Wrappers around operator new
+   static void *new_vectorlETDCDatagR(void *p) {
+      return  p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<TDCData> : new vector<TDCData>;
+   }
+   static void *newArray_vectorlETDCDatagR(Long_t nElements, void *p) {
+      return p ? ::new((::ROOT::Internal::TOperatorNewHelper*)p) vector<TDCData>[nElements] : new vector<TDCData>[nElements];
+   }
+   // Wrapper around operator delete
+   static void delete_vectorlETDCDatagR(void *p) {
+      delete ((vector<TDCData>*)p);
+   }
+   static void deleteArray_vectorlETDCDatagR(void *p) {
+      delete [] ((vector<TDCData>*)p);
+   }
+   static void destruct_vectorlETDCDatagR(void *p) {
+      typedef vector<TDCData> current_t;
+      ((current_t*)p)->~current_t();
+   }
+} // end of namespace ROOT for class vector<TDCData>
+
+namespace ROOT {
    static TClass *vectorlESiDetEnStripInfogR_Dictionary();
    static void vectorlESiDetEnStripInfogR_TClassManip(TClass*);
    static void *new_vectorlESiDetEnStripInfogR(void *p = 0);
@@ -1778,7 +1922,7 @@ namespace ROOT {
       vector<SiDetEnStripInfo> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<SiDetEnStripInfo>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<SiDetEnStripInfo>", -2, "vector", 216,
+         instance("vector<SiDetEnStripInfo>", -2, "vector", 386,
                   typeid(vector<SiDetEnStripInfo>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlESiDetEnStripInfogR_Dictionary, isa_proxy, 4,
                   sizeof(vector<SiDetEnStripInfo>) );
@@ -1788,6 +1932,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlESiDetEnStripInfogR);
       instance.SetDestructor(&destruct_vectorlESiDetEnStripInfogR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<SiDetEnStripInfo> >()));
+
+      ::ROOT::AddClassAlternate("vector<SiDetEnStripInfo>","std::vector<SiDetEnStripInfo, std::allocator<SiDetEnStripInfo> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -1841,7 +1987,7 @@ namespace ROOT {
       vector<SiDataDetailed> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<SiDataDetailed>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<SiDataDetailed>", -2, "vector", 216,
+         instance("vector<SiDataDetailed>", -2, "vector", 386,
                   typeid(vector<SiDataDetailed>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlESiDataDetailedgR_Dictionary, isa_proxy, 4,
                   sizeof(vector<SiDataDetailed>) );
@@ -1851,6 +1997,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlESiDataDetailedgR);
       instance.SetDestructor(&destruct_vectorlESiDataDetailedgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<SiDataDetailed> >()));
+
+      ::ROOT::AddClassAlternate("vector<SiDataDetailed>","std::vector<SiDataDetailed, std::allocator<SiDataDetailed> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -1904,7 +2052,7 @@ namespace ROOT {
       vector<SiDataBase> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<SiDataBase>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<SiDataBase>", -2, "vector", 216,
+         instance("vector<SiDataBase>", -2, "vector", 386,
                   typeid(vector<SiDataBase>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlESiDataBasegR_Dictionary, isa_proxy, 4,
                   sizeof(vector<SiDataBase>) );
@@ -1914,6 +2062,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlESiDataBasegR);
       instance.SetDestructor(&destruct_vectorlESiDataBasegR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<SiDataBase> >()));
+
+      ::ROOT::AddClassAlternate("vector<SiDataBase>","std::vector<SiDataBase, std::allocator<SiDataBase> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -1967,7 +2117,7 @@ namespace ROOT {
       vector<ORRUBARawData> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<ORRUBARawData>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<ORRUBARawData>", -2, "vector", 216,
+         instance("vector<ORRUBARawData>", -2, "vector", 386,
                   typeid(vector<ORRUBARawData>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEORRUBARawDatagR_Dictionary, isa_proxy, 4,
                   sizeof(vector<ORRUBARawData>) );
@@ -1977,6 +2127,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEORRUBARawDatagR);
       instance.SetDestructor(&destruct_vectorlEORRUBARawDatagR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<ORRUBARawData> >()));
+
+      ::ROOT::AddClassAlternate("vector<ORRUBARawData>","std::vector<ORRUBARawData, std::allocator<ORRUBARawData> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -2030,7 +2182,7 @@ namespace ROOT {
       vector<IonData> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<IonData>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<IonData>", -2, "vector", 216,
+         instance("vector<IonData>", -2, "vector", 386,
                   typeid(vector<IonData>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEIonDatagR_Dictionary, isa_proxy, 4,
                   sizeof(vector<IonData>) );
@@ -2040,6 +2192,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEIonDatagR);
       instance.SetDestructor(&destruct_vectorlEIonDatagR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<IonData> >()));
+
+      ::ROOT::AddClassAlternate("vector<IonData>","std::vector<IonData, std::allocator<IonData> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -2093,7 +2247,7 @@ namespace ROOT {
       vector<GretData> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<GretData>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<GretData>", -2, "vector", 216,
+         instance("vector<GretData>", -2, "vector", 386,
                   typeid(vector<GretData>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEGretDatagR_Dictionary, isa_proxy, 4,
                   sizeof(vector<GretData>) );
@@ -2103,6 +2257,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEGretDatagR);
       instance.SetDestructor(&destruct_vectorlEGretDatagR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<GretData> >()));
+
+      ::ROOT::AddClassAlternate("vector<GretData>","std::vector<GretData, std::allocator<GretData> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -2156,7 +2312,7 @@ namespace ROOT {
       vector<GamData> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<GamData>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<GamData>", -2, "vector", 216,
+         instance("vector<GamData>", -2, "vector", 386,
                   typeid(vector<GamData>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEGamDatagR_Dictionary, isa_proxy, 4,
                   sizeof(vector<GamData>) );
@@ -2166,6 +2322,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEGamDatagR);
       instance.SetDestructor(&destruct_vectorlEGamDatagR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<GamData> >()));
+
+      ::ROOT::AddClassAlternate("vector<GamData>","std::vector<GamData, std::allocator<GamData> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -2219,7 +2377,7 @@ namespace ROOT {
       vector<GSRawData> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<GSRawData>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<GSRawData>", -2, "vector", 216,
+         instance("vector<GSRawData>", -2, "vector", 386,
                   typeid(vector<GSRawData>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEGSRawDatagR_Dictionary, isa_proxy, 4,
                   sizeof(vector<GSRawData>) );
@@ -2229,6 +2387,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEGSRawDatagR);
       instance.SetDestructor(&destruct_vectorlEGSRawDatagR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<GSRawData> >()));
+
+      ::ROOT::AddClassAlternate("vector<GSRawData>","std::vector<GSRawData, std::allocator<GSRawData> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -2282,7 +2442,7 @@ namespace ROOT {
       vector<ChValPair> *ptr = 0;
       static ::TVirtualIsAProxy* isa_proxy = new ::TIsAProxy(typeid(vector<ChValPair>));
       static ::ROOT::TGenericClassInfo 
-         instance("vector<ChValPair>", -2, "vector", 216,
+         instance("vector<ChValPair>", -2, "vector", 386,
                   typeid(vector<ChValPair>), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &vectorlEChValPairgR_Dictionary, isa_proxy, 4,
                   sizeof(vector<ChValPair>) );
@@ -2292,6 +2452,8 @@ namespace ROOT {
       instance.SetDeleteArray(&deleteArray_vectorlEChValPairgR);
       instance.SetDestructor(&destruct_vectorlEChValPairgR);
       instance.AdoptCollectionProxyInfo(TCollectionProxyInfo::Generate(TCollectionProxyInfo::Pushback< vector<ChValPair> >()));
+
+      ::ROOT::AddClassAlternate("vector<ChValPair>","std::vector<ChValPair, std::allocator<ChValPair> >");
       return &instance;
    }
    // Static variable to force the class initialization
@@ -2337,12 +2499,12 @@ namespace {
 0
     };
     static const char* includePaths[] = {
-"/home/chad/root-6.14.06/builddir/include",
+"/home/chad/root-6.22.02/builddir/include",
 "/home/chad/goddess_daq_plus/include",
 "/home/chad/goddess_daq_plus/toolbox/include",
 "/home/chad/goddess_daq_plus/goddess/include",
 "/home/chad/goddess_daq_plus/scripts/include",
-"/home/chad/root-6.14.06/builddir/include",
+"/home/chad/root-6.22.02/builddir/include/",
 "/home/chad/goddess_daq_plus/goddess/source/",
 0
     };
@@ -2351,13 +2513,14 @@ namespace {
 #pragma clang diagnostic ignored "-Wkeyword-compat"
 #pragma clang diagnostic ignored "-Wignored-attributes"
 #pragma clang diagnostic ignored "-Wreturn-type-c-linkage"
-extern int __Cling_Autoloading_Map;
+extern int __Cling_AutoLoading_Map;
 class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  ChValPair;
 namespace std{template <typename _Tp> class __attribute__((annotate("$clingAutoload$bits/allocator.h")))  __attribute__((annotate("$clingAutoload$string")))  allocator;
 }
 struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  GretData;
 class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  ORRUBARawData;
 struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  GSRawData;
+struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  TDCData;
 struct __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  IonData;
 class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  SiDataDetailed;
 class __attribute__((annotate("$clingAutoload$/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h")))  SiDataBase;
@@ -2371,16 +2534,14 @@ template <class pairType> class __attribute__((annotate("$clingAutoload$/home/ch
     static const char* payloadCode = R"DICTPAYLOAD(
 #line 1 "GoddessStructDictionary dictionary payload"
 
-#ifndef G__VECTOR_HAS_CLASS_ITERATOR
-  #define G__VECTOR_HAS_CLASS_ITERATOR 1
-#endif
 
 #define _BACKWARD_BACKWARD_WARNING_H
+// Inline headers
 #include "/home/chad/goddess_daq_plus/goddess/include/GoddessStruct.h"
 
 #undef  _BACKWARD_BACKWARD_WARNING_H
 )DICTPAYLOAD";
-    static const char* classesHeaders[]={
+    static const char* classesHeaders[] = {
 "ChValPair", payloadCode, "@",
 "GSRawData", payloadCode, "@",
 "GamData", payloadCode, "@",
@@ -2396,13 +2557,14 @@ template <class pairType> class __attribute__((annotate("$clingAutoload$/home/ch
 "SiDataBase", payloadCode, "@",
 "SiDataDetailed", payloadCode, "@",
 "SiDetEnStripInfo", payloadCode, "@",
-nullptr};
-
+"TDCData", payloadCode, "@",
+nullptr
+};
     static bool isInitialized = false;
     if (!isInitialized) {
       TROOT::RegisterModule("GoddessStructDictionary",
         headers, includePaths, payloadCode, fwdDeclCode,
-        TriggerDictionaryInitialization_GoddessStructDictionary_Impl, {}, classesHeaders, /*has no C++ module*/false);
+        TriggerDictionaryInitialization_GoddessStructDictionary_Impl, {}, classesHeaders, /*hasCxxModule*/false);
       isInitialized = true;
     }
   }
