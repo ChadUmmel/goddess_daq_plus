@@ -38,7 +38,6 @@ void LoadMakeEventLists()
 void goddess_analysis_macro ( string myPathToGoddessDaq )
 {
     localPathToGoddessDaq = myPathToGoddessDaq;
-    std::cout<<localPathToGoddessDaq<<std::endl;
 
 #if __APPLE__
     MacLibrariesLoader ( myPathToGoddessDaq );
@@ -53,7 +52,7 @@ void goddess_analysis_macro ( string myPathToGoddessDaq )
 
     gROOT->ProcessLine ( Form ( "pathToGDAQ = \"%s\";", localPathToGoddessDaq.c_str() ) );
 
-    std::cout << "Type \"StartUserAnalysis()\" to load the user macros from UserAnalysisMacros.cxx" << std::endl;
+    std::cout << "Type \"StartUserAnalysis()\" to load the GODDESS user macros from UserAnalysisMacros.cxx" << std::endl;
     std::cout << std::endl;
     std::cout << "To load the TEntryList creation macros, type \"LoadMakeEventLists()\"" << std::endl;
     std::cout << "To get the list of the functions you can use, type \"EntryListsHelp()\"" << std::endl;
